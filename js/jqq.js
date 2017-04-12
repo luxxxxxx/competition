@@ -97,6 +97,70 @@
 		last : function () {
 			return $(this[this.length-1])
 		},
+		height : function (num) {
+			if (num) {
+				if (typeof num === 'string') {
+					this[0].style.height = num;
+				} else if (typeof num === 'number') {
+
+					this[0].style.height = num + 'px';
+				} else {
+					throw 'arguments error';
+				}
+			} else {
+				return parseFloat(this.css('height'));
+			}
+		},
+		width : function (num) {
+			var num = arguments[0];
+			if (num) {
+				if (typeof num === 'string') {
+					this[0].style.width = num;
+				} else if (typeof num === 'number') {
+					this[0].style.width = number + 'px';
+				} else {
+					throw 'arguments error';
+				}
+			} else {
+				return parseFloat(this.css('width'));
+			}
+		},
+		bind : function (event,func) {  //可以是两个参数  ，可以是一个对象同时绑定多个事件
+			if (window.addEventListener) {
+				if (arguments.length === 1) {
+					var evts = arguments[0];
+					if (typeof arguments[0]  ===  'object') {  //多个事件对象
+						for (var evt in evts) {
+							this.each(function(i) {
+								this.addEventListener(evt,evts[evt]);
+							})
+						}
+					}
+				} else {  //如果是两个参数
+					this.each(function(i) {
+						this[i].each(function(){
+							this.addEventListener(event,func);
+						})
+					})
+				}
+			} else {  //IE 8 attachEvent 而且还要修改this指向
+				var evts = arguments[0],
+				    l = arguments.length;
+				if (l === 1) {  
+					if (typeof evts === 'object') {
+						for (var evt in evts) {
+							this.each(function(i) {
+								this.attachEvent.call(this,'on' + evt,evts[evt]);
+							});
+						};
+					}
+				} else { //两个参数
+					this.each(function (i) {
+						this.attachEvent.call(this,'on' + event, func);
+					})
+				}
+			}
+		},
 		find : function (selector) {  //通过选择器名称来进行选择
 			var objectArr = [],
 				parentsL = this.length;

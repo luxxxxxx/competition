@@ -107,19 +107,19 @@
 		</div>
 		<div class="footerSection">
 			<ul class="main">
-				<li class="section">
+				<li class="section select">
 					<i class="icon"></i>
 					<span>书即</span>
 				</li>
-				<li class="section">
+				<li class="section select">
 					<i class="icon"></i>
 					<span>搜索</span>
 				</li>
-				<li class="section">
+				<li class="section select">
 					<i class="icon"></i>
 					<span>发布</span>
 				</li>
-				<li class="section">
+				<li class="section select">
 					<i class="icon"></i>
 					<span>我的</span>
 				</li>
@@ -130,5 +130,14 @@
 </html>
 <script src='./js/jqq.js'></script>
 <script>
-	
+	$(function(){
+		
+		$('#contentCon').height( window.innerHeight - ($('.headerBg').height() + $('.footerSection').height() + $('#main > div.main > ul').height() + parseFloat($('#main > div.main > ul').css('marginTop')) + $('#main > div.main > div.btnCon').height() + parseFloat($('#main > div.main > div.btnCon').css('marginTop')) * 2 )); //内容区块布局，能够使中间层滑动
+
+		
+
+
+
+
+	})
 </script>
