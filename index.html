@@ -28,78 +28,80 @@
 			<div id="contentCon">
 				<div class="content">
 					<div id="newest" class="contentType">  <!-- 最新 -->
-						
-						<div class="section">	
-							<div class="h clearfix">
-								<div class="photo"><img src="./img/main/tx.jpg" alt="用户头像"></div>
+						<div class="section clearfix">	
+							<div class="photo"><img src="./img/main/tx.jpg" alt="用户头像"></div>
+							<div class="rightCon clearfix">
+							<div class="top clearfix">
 								<div class="nameTag">
 									<div class="name"><span>老司机 1 号<i class="crown"></i></span></div>
 									<div class="date">2017-02-05 10:48:37</div>
 								</div>
-								<div class="star"></div>  <!-- star favour --> 
+								<div class="star favor"></div> <!-- favor 收藏-->
+							</div>
+							<div class="t clearfix">
+								<span class="bookName">
+									单片机从入门到放弃单片机从入门到放弃
+								</span>
+								<span class="bookType">
+									【教材】
+								</span>
+								<span class="sellType">
+									租聘
+								</span>
 							</div>
 							<div class="article clearfix">
-								<div class="t">
-									<span class="bookName">单片机从入门到放弃单片机从入门到放弃
-									</span>
-									<span class="bookType">【教材】</span>
-									<span class="sellType">租凭</span>
-								</div>
 								<p class="desc">单片机从入门到放弃门到放弃单片机从入门到放弃门到放弃单片机从入门到放弃门到放弃</p>
 							</div>
 							<div class="footer clearfix">
-								<span class="lll">浏览量<i class="num">666</i></span>
-								<span class="comment">评论<i class="num">555</i></span>
+								<div class="l">
+									<span class="text">浏览量</span>
+									<span class="num">999</span>
+								</div>
+								<div class="r">
+									<span class="num">999</span>
+									<span class="text">条评论</span>
+								</div>
+							</div>
 							</div>
 						</div>
-						
-						<div class="section">	
-							<div class="h clearfix">
-								<div class="photo"><img src="./img/main/tx.jpg" alt="用户头像"></div>
+
+						<div class="section clearfix">	
+							<div class="photo"><img src="./img/main/tx.jpg" alt="用户头像"></div>
+							<div class="rightCon clearfix">
+							<div class="top clearfix">
 								<div class="nameTag">
 									<div class="name"><span>老司机 1 号<i class="crown"></i></span></div>
 									<div class="date">2017-02-05 10:48:37</div>
 								</div>
-								<div class="star"></div>  <!-- star favour --> 
+								<div class="star favor"></div> <!-- favor 收藏-->
+							</div>
+							<div class="t clearfix">
+								<span class="bookName">
+									单片机从入门到放弃单片机从入门到放弃
+								</span>
+								<span class="bookType">
+									【教材】
+								</span>
+								<span class="sellType">
+									租聘
+								</span>
 							</div>
 							<div class="article clearfix">
-								<div class="t">
-									<span class="bookName">单片机从入门到放弃单片机从入门到放弃
-									</span>
-									<span class="bookType">【教材】</span>
-									<span class="sellType">租凭</span>
-								</div>
 								<p class="desc">单片机从入门到放弃门到放弃单片机从入门到放弃门到放弃单片机从入门到放弃门到放弃</p>
 							</div>
 							<div class="footer clearfix">
-								<span class="lll">浏览量<i class="num">666</i></span>
-								<span class="comment">评论<i class="num">555</i></span>
+								<div class="l">
+									<span class="text">浏览量</span>
+									<span class="num">999</span>
+								</div>
+								<div class="r">
+									<span class="num">999</span>
+									<span class="text">条评论</span>
+								</div>
+							</div>
 							</div>
 						</div>
-						
-						<div class="section">	
-							<div class="h clearfix">
-								<div class="photo"><img src="./img/main/tx.jpg" alt="用户头像"></div>
-								<div class="nameTag">
-									<div class="name"><span>老司机 1 号<i class="crown"></i></span></div>
-									<div class="date">2017-02-05 10:48:37</div>
-								</div>
-								<div class="star"></div>  <!-- star favour --> 
-							</div>
-							<div class="article clearfix">
-								<div class="t">
-									<span class="bookName">单片机从入门到放弃单片机从入门到放弃
-									</span>
-									<span class="bookType">【教材】</span>
-									<span class="sellType">租凭</span>
-								</div>
-								<p class="desc">单片机从入门到放弃门到</p>
-							</div>
-							<div class="footer clearfix">
-								<span class="lll">浏览量<i class="num">666</i></span>
-								<span class="comment">评论<i class="num">555</i></span>
-							</div>
-						</div>
+
 					</div>
 					<div id="hotest" class="contentType"></div>
 				</div>
@@ -107,7 +109,7 @@
 		</div>
 		<div class="footerSection">
 			<ul class="main">
-				<li class="section select">
+				<li class="section select">  <!-- 当前页面 select -->
 					<i class="icon"></i>
 					<span>书即</span>
 				</li>
@@ -131,13 +133,22 @@
 <script src='./js/jqq.js'></script>
 <script>
 	$(function(){
-		
 		$('#contentCon').height( window.innerHeight - ($('.headerBg').height() + $('.footerSection').height() + $('#main > div.main > ul').height() + parseFloat($('#main > div.main > ul').css('marginTop')) + $('#main > div.main > div.btnCon').height() + parseFloat($('#main > div.main > div.btnCon').css('marginTop')) * 2 )); //内容区块布局，能够使中间层滑动
+		var $nav = $('ul.nav'),
+		    $lis = $('ul.nav > li'),
+		    allLisW = function () {
+		    	var g = 0;
+		    	for (var i = 0; i < $lis.length; i++) {
+		    		g += $($lis[i]).width()
+		    	}
+		    	return g;
+			}
 
+		$lis.css('padding',0).css('padding','0 ' + ($nav.width() - allLisW())/($lis.length*2) + 'px'); //兼容平铺导航栏
 		
-
-
-
+		$(".contentType .star").click(function () {
+			$(this).toggleClass("favor");
+		})
 
 	})
 </script>

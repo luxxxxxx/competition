@@ -1,0 +1,122 @@
+<html>
+<meta charset="utf-8">
+	<head>
+		<style>
+			div {
+				padding: 100px;
+				border: 1px solid black;
+			}
+		</style>	
+	</head>
+	<body>
+		
+	</body>
+</html>
+<script>
+	var outer = document.querySelector('.outer'),
+		inner = document.querySelector('.inner');
+		outer.addEventListener('click',function(e){
+			// alert(this.className);
+			console.log(e.target)
+		},true)
+		function ajax (obj) {
+			var method = obj.method || 'get',
+				url = obj.url,
+				data = obj.data,
+				aysn = obj.aysn ? true : obj.aysn === undefined ? true : false,
+				success = obj.success,
+				error = obj.error,
+				xhr = window.XMLHttpRequest ? new window.XMLHttpRequest() : new window.ActiveXObject('MicroSoft.XMLHTTP'),
+				xhr.onreadyStateChange = function () {
+					if (method.toLowerCase === 'get') {
+						url += '&' + data + new Date().getTime()
+					}
+				}
+
+		}
+
+
+		function a () {
+			console.log(this)
+		}
+
+		console.log(new a());
+		Array.prototype.newMap = function (func) {
+			var l = this.length,
+				arr = [];
+			for (var i = 0; i < l; i++) {
+				arr.push(func(this[i]))
+			}
+			return arr;
+		}
+		Array.prototype.newFilter = function (func) {
+			var l = this.length,
+				arr = [];
+			for (var i = 0; i < l; i++) {
+				if (func(this[i])) 
+					arr.push(this[i])
+			}
+			return arr;
+		}
+		var a = [1,2,3,4,5,,7];
+		a.newFilter(function(x){return x > 5})
+
+		Array.prototype.newEvery = function (func) {
+			var l = this.length,
+				arr = [],
+				flag = false;
+			for (var i = 0; i < l; i++) {
+				if (func(this[i])) {
+					flag = true;
+				} else {
+					flag = false;
+					break;
+				}
+			}
+			return flag;
+		}
+		var a = [1,2,3,4,5,5,6,7,10];
+		a.newEvery(function(x) {
+			return x >= 0
+		})
+
+
+		Array.prototype.newSome = function (func) {
+			var l = this.length,
+				arr = [];
+			for (var i = 0; i < l; i++) {
+				if (func(this[i])) {
+					return true;
+				}
+			}
+			return false;
+		}
+		Array.prototype.newReduce = function (func,num) {
+			var l = this.length,
+				arr = [];
+			if (arguments.length === 2) {
+				var x = num;
+				for (var i = 0; i < l; i++) {
+					var y = this[i];
+					x = func(x,y)
+					console.log(x)
+				}
+			} else {
+					var x = this[0];   //  1.1  
+				for (var i = 0; i < l - 1; i++) {
+					var	y = this[i + 1];  //  1.2
+					x = func(x,y);
+					console.log(x)
+				}
+			}
+			return x;
+		}
+		var a = [1,2,3,4,5,6]
+		console.log(a.newReduce(function(x,y){return (x > y)? x : y},0))
+
+
+		var a = function () {};
+		a.prototype.say = function () {console.log('speak')};
+		var fn = function(){};
+		fn.prototype = a.prototype;
+</script> 

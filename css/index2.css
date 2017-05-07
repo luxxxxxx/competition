@@ -1,0 +1,420 @@
+#main {
+  width: 10rem;
+  box-sizing: border-box;
+  padding: 0.46875rem 0.28125rem 0;
+  background: url('../img/main/bg.jpg') no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+#main #contentCon {
+  width: 100%;
+  box-sizing: border-box;
+}
+#main #contentCon .section {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0.125rem;
+  box-sizing: border-box;
+  margin-bottom: 0.234375rem;
+  padding: 0.21875rem 0.75rem 0.140625rem 0.15625rem;
+}
+#main #contentCon .section .photo {
+  float: left;
+  width: 1.0rem;
+  height: 1.0rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 0.234375rem;
+}
+#main #contentCon .section .photo img {
+  width: 100%;
+  height: 100%;
+}
+#main #contentCon .section .rightCon {
+  width: 7.265625rem;
+  float: left;
+}
+#main #contentCon .section .rightCon .nameTag {
+  position: relative;
+  float: left;
+  max-width: 3.90625rem;
+}
+#main #contentCon .section .rightCon .nameTag .name {
+  font-size: 0.375rem;
+  color: #000;
+}
+#main #contentCon .section .rightCon .nameTag .name span {
+  position: relative;
+}
+#main #contentCon .section .rightCon .nameTag .name span i.crown {
+  position: absolute;
+  right: -0.46875rem;
+  top: 0.15625rem;
+  width: 0.265625rem;
+  height: 0.203125rem;
+  background: url('../img/main/crown.png') no-repeat center;
+  background-size: cover;
+}
+#main #contentCon .section .rightCon .nameTag .date {
+  font-size: 0.234375rem;
+  color: #5b5959;
+}
+#main #contentCon .section .rightCon .star {
+  position: relative;
+  float: right;
+  width: 0.3125rem;
+  margin-top: 0.15625rem;
+  height: 0.3125rem;
+  background: url('../img/main/star1.png') no-repeat center;
+  background-size: cover;
+}
+#main #contentCon .section .rightCon .star.favor {
+  background: url('../img/main/star.png') no-repeat center;
+  background-size: cover;
+}
+#main #contentCon .section .t {
+  font-size: 0.46875rem;
+  margin: 0 auto 0.078125rem;
+  white-space: nowrap;
+}
+#main #contentCon .section .t span {
+  font-size: 0.46875rem;
+  vertical-align: top;
+}
+#main #contentCon .section .t span.bookName {
+  display: inline-block;
+  max-width: 4.53125rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#main #contentCon .section .t span.bookType {
+  color: #009917;
+  margin-left: -0.15625rem;
+}
+#main #contentCon .section .t span.sellType {
+  color: #fff;
+  width: 0.625rem;
+  white-space: nowrap;
+  height: 0.3125rem;
+  background-color: #74c7ff;
+  border-radius: 0.1875rem;
+  font-size: 0.125rem;
+  text-align: center;
+  line-height: 0.3125rem;
+  vertical-align: baseline;
+  padding: 0 0.046875rem;
+  margin-left: -0.3125rem;
+}
+#main #contentCon .section .article {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+#main #contentCon .section .article .desc {
+  margin: 0 auto;
+  font-size: 0.375rem;
+  top: 0.71875rem;
+  width: 7.265625rem;
+  height: 0.84375rem;
+  line-height: 0.421875rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#main #contentCon .section .article .borrowCon {
+  position: relative;
+}
+#main #contentCon .section .article .borrowCon .l {
+  display: inline-block;
+  max-width: 5.625rem;
+}
+#main #contentCon .section .article .borrowCon .l p {
+  font-size: 0.375rem;
+  max-width: 5.625rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#main #contentCon .section .article .borrowCon .l .date {
+  font-size: 0.1875rem;
+  color: #5b5959;
+  max-width: 5.625rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#main #contentCon .section .article .borrowCon .borrow {
+  position: absolute;
+  right: 0;
+  bottom: 0.234375rem;
+  display: inline-block;
+  width: 1.5625rem;
+  height: 0.625rem;
+  line-height: 0.625rem;
+  font-size: 0.3125rem;
+  letter-spacing: 0.03125rem;
+  vertical-align: bottom;
+  background: #268AD1;
+  text-align: center;
+  color: #fff;
+  border-radius: 0.09375rem;
+}
+#main #contentCon .section .footer {
+  margin-top: 0.078125rem;
+}
+#main #contentCon .section .footer div.l {
+  float: left;
+}
+#main #contentCon .section .footer div.l .text {
+  margin-right: 0.09375rem;
+}
+#main #contentCon .section .footer div.r {
+  float: right;
+}
+#main #contentCon .section .footer div.r .num {
+  margin-right: 0.09375rem;
+}
+#main #contentCon .section .footer div span {
+  font-size: 0.234375rem;
+}
+#main #responseCon .section {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0.125rem;
+  box-sizing: border-box;
+  margin-bottom: 0.234375rem;
+  padding: 0.21875rem 0.75rem 0.140625rem 0.15625rem;
+}
+#main #responseCon .section .user {
+  margin-bottom: 0.1875rem;
+}
+#main #responseCon .section .user .photo {
+  float: left;
+  width: 1.0rem;
+  height: 1.0rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 0.234375rem;
+}
+#main #responseCon .section .user .photo img {
+  width: 100%;
+  height: 100%;
+}
+#main #responseCon .section .user .rightCon {
+  width: 7.265625rem;
+  float: left;
+}
+#main #responseCon .section .user .rightCon .nameTag {
+  position: relative;
+  float: left;
+  max-width: 3.90625rem;
+}
+#main #responseCon .section .user .rightCon .nameTag .name {
+  font-size: 0.375rem;
+  color: #000;
+}
+#main #responseCon .section .user .rightCon .nameTag .name span {
+  position: relative;
+}
+#main #responseCon .section .user .rightCon .nameTag .name span i.crown {
+  position: absolute;
+  right: -0.46875rem;
+  top: 0.15625rem;
+  width: 0.265625rem;
+  height: 0.203125rem;
+  background: url('../img/main/crown.png') no-repeat center;
+  background-size: cover;
+}
+#main #responseCon .section .user .rightCon .nameTag .date {
+  font-size: 0.234375rem;
+  color: #5b5959;
+}
+#main #responseCon .section .user .rightCon .thumbCon {
+  position: relative;
+  top: 0.3125rem;
+  float: right;
+  display: inline-block;
+}
+#main #responseCon .section .user .rightCon .thumbCon i {
+  position: relative;
+  display: inline-block;
+  margin-top: 0.09375rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  background: url("../img/main/thumb.png") no-repeat center;
+  background-size: cover;
+  line-height: 0.4375rem;
+}
+#main #responseCon .section .user .rightCon .thumbCon span {
+  position: relative;
+  top: -0.046875rem;
+  margin-left: 0.046875rem;
+  color: #268ad1;
+}
+#main #responseCon .section .user .rightCon .response {
+  width: 7.65625rem;
+}
+#main #responseCon .section .user .rightCon .response p {
+  font-size: 0.375rem;
+  line-height: 0.5625rem;
+}
+#main #responseCon .section .user .rightCon .response .imgCon {
+  max-width: 100%;
+  overflow-x: hidden;
+  white-space: nowrap;
+  margin-top: 0.15625rem;
+  margin-bottom: 0.1875rem;
+}
+#main #responseCon .section .user .rightCon .response .imgCon .img {
+  float: left;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.078125rem;
+  overflow: hidden;
+  border-radius: 0.09375rem;
+}
+#main #responseCon .section .user .rightCon .response .imgCon .img:nth-child(3) {
+  margin-right: 0;
+}
+#main #responseCon .section .user .rightCon .response .imgCon .img img {
+  width: 100%;
+  height: 100%;
+}
+#main #mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  transition: .2s all ease;
+  opacity: 1;
+}
+#main #mask.no {
+  visibility: hidden;
+  opacity: 0;
+}
+#main #mask .showPics {
+  position: fixed;
+  bottom: 1.296875rem;
+  left: 0.125rem;
+  background: white;
+  display: none;
+  height: 2.5rem;
+  box-sizing: border-box;
+  padding: 0.203125rem 0.28125rem;
+  border-radius: 0.125rem;
+}
+#main #mask .showPics .picSlider {
+  display: inline-block;
+  max-width: 6.40625rem;
+  height: 100%;
+  overflow-y: visible;
+}
+#main #mask .showPics .picSlider .picCon {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+  overflow-y: visible;
+}
+#main #mask .showPics .picSlider .pic {
+  position: relative;
+  float: left;
+  width: 2.03125rem;
+  height: 2.03125rem;
+  margin-right: 0.453125rem;
+  border-radius: 0.09375rem;
+}
+#main #mask .showPics .picSlider .pic:nth-last-child(1) {
+  margin-right: 0.453125rem;
+}
+#main #mask .showPics .picSlider .pic .delete {
+  display: inline-block;
+  position: absolute;
+  right: -0.109375rem;
+  top: -0.125rem;
+  width: 0.484375rem;
+  height: 0.484375rem;
+  background: url('../img/main/delete.png') no-repeat center;
+  background-size: cover;
+}
+#main #mask .showPics .picSlider .pic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.09375rem;
+}
+#main #mask .showPics .addPics {
+  display: inline-block;
+  width: 2.03125rem;
+  height: 2.03125rem;
+  background: url("../img/main/addPics.png") no-repeat center;
+  background-size: cover;
+}
+#main #mask .showPics .arrow {
+  position: absolute;
+  left: 0.3125rem;
+  bottom: -0.28125rem;
+  background: #fff;
+  box-sizing: border-box;
+  width: 0.28125rem;
+  height: 0.28125rem;
+  background: transparent;
+  border-left: 0.140625rem solid transparent;
+  border-right: 0.140625rem solid transparent;
+  border-top: 0.140625rem solid #fff;
+  border-bottom: 0.140625rem solid transparent;
+}
+#main #mask.pic .showPics {
+  display: block;
+}
+#comment {
+  position: fixed;
+  bottom: 0;
+  padding-top: 0.234375rem;
+  padding-bottom: 0.21875rem;
+  height: 0.9375rem;
+  background: #fff;
+}
+#comment .middle {
+  display: inline-block;
+  margin: 0 auto;
+}
+#comment .pic {
+  position: relative;
+  top: 0.0625rem;
+  float: left;
+  width: 0.8125rem;
+  height: 0.8125rem;
+  margin-left: 0.21875rem;
+  background: url('../img/main/imgInsert.png') no-repeat center;
+  background-size: cover;
+}
+#comment #inputText {
+  float: left;
+  width: 7.09375rem;
+  height: 0.9375rem;
+  margin-left: 0.203125rem;
+  box-sizing: border-box;
+  padding: 0.0625rem 0.3125rem;
+  border: none;
+  outline: none;
+  background-color: #BAE9FD;
+  color: #7C7A7A;
+  font-size: 0.3125rem;
+  line-height: 0.3125rem;
+  border-radius: 0.09375rem;
+}
+#comment #sendBtn {
+  position: relative;
+  top: 0.078125rem;
+  float: left;
+  margin-left: 0.203125rem;
+  width: 1.25rem;
+  height: 0.78125rem;
+  color: #fff;
+  font-size: 0.34375rem;
+  text-align: center;
+  line-height: 0.78125rem;
+  background: #268ad1;
+  border-radius: 0.125rem;
+}
