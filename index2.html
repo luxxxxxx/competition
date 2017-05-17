@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>书及</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index2.css">
     <script type="text/javascript">
@@ -18,10 +18,6 @@
 				<div class="arrow"></div>
 				<div class="picSlider">
 					<ul class="picCon clearfix">
-						<li class="pic">
-							<img src="./img/main/tx.jpg" alt="用户头像" />
-							<i class="delete"></i>
-						</li>
 						<li class="pic">
 							<img src="./img/main/tx.jpg" alt="用户头像" />
 							<i class="delete"></i>
@@ -149,7 +145,7 @@
 		<div class="pic"></div>
 		<input type="text" id="inputText"/>
 		<div id="sendBtn">发送</div>
-		<input type="file" / id="inputFile" style="display: none;">
+		<input type="file" accept="image/*" nultiple="multiple" id="inputFile" style="display: none;">
 	</div>
 </div>
 </body>
@@ -166,29 +162,47 @@
 		$inputFile.click();
 	})
 	$inputFile.bind('change',function(){  //监听file改变
-		var file = this.files[0],
-		reader = new FileReader ();
-		reader.readAsDataURL(file);
-		reader.onload = function (e) {
-			var resultURL = e.target.result;
-			var oImg = document.createElement('img');
-				oImg.src = resultURL;
-			var	cvs = document.createElement('canvas');
-				oImg.onload = function () {
-					cvs.width = 500;
-					cvs.height = 500;
-					var ctx = cvs.getContext('2d');
-					ctx.drawImage(this,0,0,cvs.width,cvs.height);
-					newImageData = cvs.toDataURL(file.type,0.5);
-					showImage.src = newImageData;
-					removeClass(showImageBox,'upload');
-					imgURL.value = newImageData;
-				}
+		$("#mask > div > div.picSlider > ul").html('');
+		var file = this.files,
+			reader = new FileReader(),
+			picsBase = [],
+			reader = new FileReader(),
+		    loopNum = Math.min(file.length,2);
+
+		for (var i = 0; i < loopNum; i++) {
+			var file = this.files,
+				reader = new FileReader(),
+			    oLi = document.createElement('li'),
+			    oImg = document.createElement('img'),
+			    oI = document.createElement('oI'),
+			    cvs = document.createElement('canvas');
+		    oI.className = 'delete';
+		    oI.onclick = function () {
+		    	$(this).parent().remove();
+		    }
+		    oLi.appendChild(oI);
+			reader.onload = function () {
+				cvs.width = 500;
+				cvs.height = 500;
+				var ctx = cvs.getContext('2d');
+				ctx.drawImage(this,0,0,cvs.width,cvs.height);
+				newImageData = cvs.toDataURL(file[i],0.5);
+				oImg.src = newImageData;
+				oLi.appendChild(oImg);
+				oLi.className = 'pic';
+				$("#mask > div > div.picSlider > ul")[0].appendChild(oLi);
+			}
 		}
+
 	})
+
+	//<li class="pic">
+//						<img src="./img/main/tx.jpg" alt="用户头像" />
+//						<i class="delete"></i>
+//					</li>
 	$('.delete').click(function () { //删除图片
 		$(this).parent().remove();
-	})
+	}) 
 
 	$("#mask").bind("touchstart",function (e) {  //触摸屏幕退回之前选择图片前
 		var e = e || window.evnet;

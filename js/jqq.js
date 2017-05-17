@@ -11,28 +11,7 @@
 		return this.exe(arg);
 	}
 	$.prototype = {
-		ajax : function (obj) {
-			var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP'),  //兼容老版本IE 
-			method = json.method || 'get',
-			asyn = json.asyn ? true : json.asyn == false ? false : true,
-			data = json.data || '',
-			success = json.success,
-			error = json.error,
-			url = json.url;
-			if ( method.toLowerCase() === 'get' ) 
-				url += '?'+ data +'&'+new Date().getTime();
-			xhr.onreadystatechange = function(){
-				if ( xhr.readyState == 4 ) {
-					if ( xhr.status >= 200 && xhr.status < 300 )
-						success && success(xhr.responseText);
-					else
-						error && error();
-				}
-			};
-			xhr.open( method, url , aysn );
-			xhr.setRequestHeader('content-type' , 'application/x-www-form-urlencoded');
-			xhr.send(data);
-		},
+		
 		getUrl : function (file) {
 			var url;
 			if (window.createObjectURL != undefined) {
@@ -89,16 +68,16 @@
 					targetDom = this[0];  //第一个节点(目标节点) 在这里先转化成js对象用js的currentStyle 和 getComputedStyle
 					switch (attr) {
 						case 'left' :
-							return targetDom.offsetLeft + 'px';
+							return targetDom.offsetLeft;
 							break;
 						case 'right' :
-							return (targetDom.offsetRight + targetDom.offsetWidth) + 'px';
+							return targetDom.offsetRight + targetDom.offsetWidth;
 							break;
 						case 'top' :
-							return targetDom.offsetTop + 'px';
+							return targetDom.offsetTop;
 							break;
 						case 'bottom' :
-							return targetDom.offsetTop + targetDom.offsetHeight + 'px';
+							return targetDom.offsetTop + targetDom.offsetHeight;
 							break;
 						default :
 							return targetDom.currentStyle ? targetDom.currentStyle[attr] : getComputedStyle(targetDom)[attr];
@@ -107,25 +86,54 @@
 				} else if (typeof attr === 'object') {
 					for (var i in attr) {
 						this.each(function(){
-							if (typeof attr[i] === 'number') //自动补全px
-								attr[i] += 'px';
-							this.style[i] = attr[i];
+							$(this).css(i,attr[i]);
 						})
 					}
 				}
-
-			} else if (argsL === 2) {
+			} else if (argsL === 2) {  //两个参数
 				this.each(function(i) {
-					this.style[args[0]] = args[1];
+					switch (args[0]) {
+						case 'left' :
+							this.style[args[0]] = parseFloat(args[1]) + 'px';
+							break;
+						case 'right' :
+							this.style[args[0]] = parseFloat(args[1]) + 'px';
+							break;
+						case 'top' :
+							this.style[args[0]] = parseFloat(args[1]) + 'px';
+							break;
+						case 'bottom' :
+							this.style[args[0]] = parseFloat(args[1]) + 'px';
+							break;
+						default :
+							this.style[args[0]] = args[1];
+							break; 
+					}
+					
 				});
 			}
 			return this;
 		},
+		//Html
+		html : function (str) {
+			if (arguments[0] != undefined) {
+				this.each(function(i){
+					this.innerHTML = str;
+				})
+			}
+			return this[0].innerHTML;
+		},
+		empty : function () {
+			this.each(function(i) {
+				this.innerHTML = '';
+			})
+		},
 		//节点操作
-
+		//Eq
 		eq : function (num) {  //返回指定位置的jqq对象
 			return $(this[num]);
 		},
+		//Get
 		get : function (num) { //返回JS对象
 			return this[num];
 		},
@@ -140,24 +148,31 @@
 				return $(this[0].parentNode);
 			}
 		},
+		//Siblings
 		siblings : function () {
 			if (!this[0]) {
 				throw "this is undefined";
 			}
-			var father = this[0].parentNode,
+			var currentNode = this[0],
+			    father = currentNode.parentNode,
 				childs = father.childNodes,
 				l = childs.length,
 				nodeArr = [];
 				for (var i = 0; i < l; i++) {
-					if (childs[i].nodeType != 3) {
+					if (childs[i].nodeType != 3 && childs[i] != currentNode) {
 						nodeArr.push(childs[i]);
 					}
 				}
+				console.log(nodeArr)
 				return $(nodeArr);
 		},
 		//Remove
 		remove : function (selector) {
 			this.parent()[0].removeChild(this[0]);
+		},
+		//Child 
+		child : function (num) {
+			return $(this[0].children[num]);
 		},
 		//Height
 		height : function (num) {
@@ -187,6 +202,42 @@
 				}
 			} else {
 				return parseFloat(this.css('width'));
+			}
+		},
+		//Left 
+		left : function (num) {
+			if (typeof arguments[0] == 'number') {
+				this.css('left',num);
+				return this;
+			} else {
+				return $(this[0]).css('left');
+			}
+		},
+		//Top
+		top : function (num) {
+			if (typeof arguments[0] == 'number') {
+				this.css('top',num);
+				return this;
+			} else {
+				return $(this[0]).css('top');
+			}
+		},
+		//Right
+		right : function (num) {
+			if (typeof arguments[0] == 'number') {
+				this.css('right',num);
+				return this;
+			} else {
+				return $(this[0]).css('right');
+			}
+		},
+		//Bottom
+		bottom : function (num) {
+			if (typeof arguments[0] == 'number') {
+				this.css('bottom',num);
+				return this;
+			} else {
+				return $(this[0]).css('bottom');
 			}
 		},
 		//Bind
@@ -296,6 +347,7 @@
 					  	this.className += ' ' + clN;
 				}
 			})
+			return this;
 		},
 		//RemoveClass
 		removeClass : function (clN) {
@@ -352,10 +404,30 @@
 		//Val
 		val : function () {
 			return this[0].value;
-		}
-		
-		
-		
+		},
+		//Ajax
+		ajax : function (obj) {
+			var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP'),  //兼容老版本IE 
+			method = json.method || 'get',
+			asyn = json.asyn ? true : json.asyn == false ? false : true,
+			data = json.data || '',
+			success = json.success,
+			error = json.error,
+			url = json.url;
+			if ( method.toLowerCase() === 'get' ) 
+				url += '?'+ data +'&'+new Date().getTime();
+			xhr.onreadystatechange = function(){
+				if ( xhr.readyState == 4 ) {
+					if ( xhr.status >= 200 && xhr.status < 300 )
+						success && success(xhr.responseText);
+					else
+						error && error();
+				}
+			};
+			xhr.open( method, url , aysn );
+			xhr.setRequestHeader('content-type' , 'application/x-www-form-urlencoded');
+			xhr.send(data);
+		},
  	}
 	window.$ = window.jqq = $;
 })()

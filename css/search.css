@@ -1,0 +1,181 @@
+#main {
+  width: 10rem;
+  margin: 0 auto;
+  background-color: #47a5ff;
+  border-radius: 0.0625rem;
+}
+#main #header {
+  height: 2.15625rem;
+  background: #d4f1fe;
+  box-sizing: border-box;
+  padding: 0.546875rem 0.78125rem;
+  margin-bottom: 0.234375rem;
+}
+#main #header .inputCon {
+  width: 100%;
+  height: 100%;
+  background-color: #a9e3fc;
+  border-radius: 0.09375rem;
+  overflow: hidden;
+}
+#main #header .inputCon input {
+  height: 100%;
+  width: 83%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.390625rem;
+  text-indent: 1.5em;
+  color: #908f8f;
+  float: left;
+}
+#main #header .inputCon .searchIcon {
+  float: right;
+  width: 1.40625rem;
+  height: 100%;
+  background: url('../img/search/search.png') no-repeat center;
+  background-size: 60%;
+}
+#main #contentBody {
+  box-sizing: border-box;
+  background: url('../img/search/bg1.png') no-repeat center -13rem;
+  padding: 0.234375rem 0.78125rem;
+}
+#main #contentBody p {
+  font-size: 0.390625rem;
+  margin-bottom: 0.34375rem;
+}
+#main #contentBody ul.hotSearch {
+  width: 6.25rem;
+  height: 100%;
+  overflow-y: auto;
+  margin: 0 auto;
+}
+#main #contentBody ul.hotSearch li {
+  width: 100%;
+  height: 0.875rem;
+  border-radius: 0.4375rem;
+  text-align: center;
+  line-height: 0.875rem;
+  box-sizing: border-box;
+  color: #268ad1;
+  border: 2px solid #268ad1;
+  background-color: #fff;
+  transition: 0.2s background-color linear;
+  margin-bottom: 0.203125rem;
+}
+#main #contentBody ul.hotSearch li.on {
+  color: #fff;
+  background: #268ad1;
+}
+#main #contentBody ul.hotSearch li:nth-last-child(1) {
+  margin-bottom: 0.9375rem;
+}
+#main .footerSection {
+  z-index: 10;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 1.53125rem;
+  background: #fff;
+}
+#main .footerSection > .main {
+  width: 8.125rem;
+  height: 1.0rem;
+  margin: 0.234375rem auto 0;
+  background: inherit;
+  overflow: visible;
+}
+#main .footerSection > .main .section {
+  position: relative;
+  display: inline-block;
+  width: 0.703125rem;
+  height: 0.9375rem;
+  float: left;
+}
+#main .footerSection > .main .section.select span {
+  color: #099dff;
+}
+#main .footerSection > .main .section.select:nth-child(1) i.icon {
+  width: 0.8125rem;
+  height: 0.625rem;
+  background: url('../img/main/book1.png') no-repeat;
+  background-size: cover;
+}
+#main .footerSection > .main .section.select:nth-child(2) i.icon {
+  width: 0.6875rem;
+  height: 0.625rem;
+  background: url('../img/main/search1.png') no-repeat;
+  background-size: cover;
+}
+#main .footerSection > .main .section.select:nth-child(3) i.icon {
+  width: 0.625rem;
+  height: 0.625rem;
+  background: url('../img/main/publish1.png') no-repeat;
+  background-size: cover;
+}
+#main .footerSection > .main .section.select:nth-child(4) i.icon {
+  width: 0.59375rem;
+  height: 0.625rem;
+  background: url('../img/main/mine1.png') no-repeat;
+  background-size: cover;
+}
+#main .footerSection > .main .section:nth-child(1) {
+  margin-right: 1.796875rem;
+}
+#main .footerSection > .main .section:nth-child(1) i.icon {
+  display: block;
+  width: 0.75rem;
+  height: 0.59375rem;
+  margin: 0 auto;
+  background: url('../img/main/book.png') no-repeat;
+  background-size: cover;
+}
+#main .footerSection > .main .section:nth-child(2) {
+  margin-right: 1.875rem;
+}
+#main .footerSection > .main .section:nth-child(2) i.icon {
+  display: block;
+  width: 0.59375rem;
+  height: 0.59375rem;
+  margin: 0 auto;
+  background: url('../img/main/search.png') no-repeat;
+  background-size: cover;
+}
+#main .footerSection > .main .section:nth-child(3) i.icon {
+  display: block;
+  width: 0.59375rem;
+  height: 0.59375rem;
+  margin: 0 auto;
+  background: url('../img/main/publish.png') no-repeat;
+  background-size: cover;
+}
+#main .footerSection > .main .section:nth-child(4) {
+  float: right;
+}
+#main .footerSection > .main .section:nth-child(4) i.icon {
+  display: block;
+  width: 0.59375rem;
+  height: 0.59375rem;
+  margin: 0 auto;
+  background: url('../img/main/mine.png') no-repeat;
+  background-size: cover;
+}
+#main .footerSection > .main .section i.icon {
+  display: block;
+  width: 100%;
+  height: 0.625rem;
+  background-size: cover;
+}
+#main .footerSection > .main .section span {
+  position: relative;
+  top: 0.078125rem;
+  display: block;
+  margin-top: 0.0625rem;
+  font-size: 0.34375rem;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 0.3125rem;
+  color: #7d6464;
+  vertical-align: bottom;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>发布</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/publish.css">
+    <script type="text/javascript">
+	!function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),q=a.devicePixelRatio;i=p?q>=3&&(!i||i>=3)?3:q>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var r=e.createElement("div");r.appendChild(g),e.write(r.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));
+	</script>
+</head>
+<body>
+	<div id="main" class="tags"> <!-- tags：选择类型 infos：填写信息 success : 发布成功    fail : 发布失败 -->
+		<div id="mask">
+			<div class="successCon msg">
+				<p>发布成功</p>
+				<div id="successConfirm">确定</div>
+			</div>
+			<div class="msg failCon">
+				<p>发布失败：信息未填写完整</p>
+				<div class="return">返回</div>
+			</div>
+		</div>
+		<div class="tags">
+			<p>请选择标签</p>
+			<div class="main">
+				<div id="rentBtn" class="seleTypeBtn rent">出租</div>
+				<div id="sellBtn" class="seleTypeBtn sell">出售</div>
+				<div class="return">返回</div>
+			</div>
+		</div>
+		<div class="infos">
+			<div class="seleCon">
+				<span>书籍名称：</span>
+				<div class="inputCon">
+					<input type="text" maxlength="8" placeholder="<8字以内>" />
+				</div>
+			</div>
+			<div class="seleCon">
+				<span>类别选择：</span>
+				<div class="inputCon selectType">
+					<div class="seles"></div>
+					<div class="arrowCon">
+						<div class="arrow"></div>
+					</div>
+					<ul class="slideDown">
+						<li>教材</li>
+						<li>文学</li>
+						<li>互联网</li>
+						<li>其他</li>
+					</ul>
+				</div>
+			</div>
+			<div class="seleCon">
+				<span>节约时间：</span>
+				<div class="inputCon selectType">
+					<div class="seles"></div>
+					<div class="arrowCon">
+						<div class="arrow"></div>
+					</div>
+					<ul class="slideDown">
+						<li>10天</li>
+						<li>15天</li>
+						<li>20天</li>
+						<li>30天</li>
+					</ul>
+				</div>
+			</div>
+			<p class="desc">书籍简介：</p>
+			<textarea name="" id="desc" maxlength="300" placeholder="300字以内"></textarea>
+			<div id="publishBtn">发布</div>
+		</div>
+	</div>
+</body>
+</html>
+<script src="./js/jqq.js"></script>
+<script>
+	var winH = window.innerHeight,
+		flagBookName = false,
+		flagType = false,
+		flagTime = false,
+		selectionType;  //全局选择类型  'rent'  'sell'
+		$('#main').height(winH);
+		$('.seleTypeBtn').click(function(){
+			selectionType = this.id;
+			$('#main').setClass('infos');
+		});
+
+		$('#mask').bind('touchstart',function (e) {
+			var e = e || window.event;
+			console.log(e.target)
+			console.log(this)
+			if (e.target === this) {
+				$('#main').removeClass('mask');
+				$('.selectType').removeClass('on');
+				$('.seleCon').removeClass('on');
+			}
+		})
+
+		$('#main > div.infos > div:nth-child(1) > div > input[type="text"]').bind('keyup',function(){
+			if (this.value != '') {
+				flagBookName = true;
+			}
+		})
+
+		$('.selectType').click(function(){
+			$('#main').addClass('mask');
+			$(this).addClass('on');
+			$(this).parent().addClass('on')
+		})
+		$('#publishBtn').click(function () {
+			$('#main').addClass('success');
+		})
+		$('div.seleCon:nth-child(2) li').click (function () {
+			$(this).addClass('on').siblings().removeClass('on');
+			$('div.seleCon:nth-child(2) div.seles').html($(this).html())
+			flagType = true;
+		})
+		$('div.seleCon:nth-child(3) li').click (function () {
+			$(this).addClass('on').siblings().removeClass('on');
+			$('div.seleCon:nth-child(3) div.seles').html($(this).html())
+			flagTime = true;
+		})
+
+		$('#publishBtn').click (function () {
+			if (flagBookName || flagTime || flagType) {
+
+				$('#main').setClass('success mask infos');
+			} else {
+				$('#main').setClass('fail mask infos');
+			}
+		})
+		$('#successConfirm').click(function () {
+			$('#main').setClass('infos')
+		})
+		$('.return').click(function () {
+			$('#main').setClass('infos')
+		})
+		// var infosL = $('#main div.infos').left(),
+		// 	infosT = $('#main div.infos').top(),
+		//     hiddenTagL1 = $('.selectType').eq(0).left() + infosL,
+		//     hiddenTagL2 = $('.selectType').eq(1).left() +　infosL,
+		//     hiddenTagT1 = $('.selectType').eq(0).top() +　infosT,
+		//     hiddenTagT2 = $('.selectType').eq(1).top() +　infosT;
+		// $('.hiddenTags').eq(0).top(hiddenTagT1);
+		// $('.hiddenTags').eq(0).left(hiddenTagL1);
+
+</script>
