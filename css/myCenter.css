@@ -1,0 +1,97 @@
+html,
+body {
+  height: 100%;
+}
+#main {
+  width: 10rem;
+  height: 100%;
+  background: url('../img/search/bg.png') no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+#main .myInfos {
+  width: 4.0625rem;
+  height: 4.21875rem;
+  margin: 0.84375rem auto;
+}
+#main .myInfos .pho {
+  width: 1.875rem;
+  height: 1.875rem;
+  margin: 0 auto 0.203125rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+#main .myInfos .pho img {
+  width: 100%;
+  height: 100%;
+}
+#main .myInfos .name {
+  position: relative;
+  width: 100%;
+  height: 0.5rem;
+  margin-bottom: 0.5375rem;
+  text-align: center;
+  line-height: 0.5rem;
+}
+#main .myInfos .name .relative {
+  height: 0.5rem;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+#main .myInfos .name .relative p {
+  display: inline-block;
+  max-width: 3.90625rem;
+  height: 100%;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  white-space: nowrap;
+  font-size: 0.546875rem;
+}
+#main .myInfos .name .relative i {
+  position: relative;
+  top: -0.05rem;
+  display: inline-block;
+  vertical-align: center;
+  margin-left: 0.15rem;
+  width: 0.4375rem;
+  height: 0.3125rem;
+  background: url('../img/main/crown.png') no-repeat center;
+  background-size: cover;
+}
+#main .myInfos .expCon {
+  height: 0.375rem;
+}
+#main .myInfos .expCon span {
+  font-size: 0.390625rem;
+  line-height: 0.375rem;
+}
+#main .myInfos .expCon .expBar {
+  position: relative;
+  display: inline-block;
+  width: 2.5875rem;
+  height: 100%;
+  border-radius: 0.1875rem;
+  border: 1px solid black;
+  box-sizing: border-box;
+  background: #fff;
+  text-align: center;
+  line-height: 0.375rem;
+}
+#main .myInfos .expCon .expBar .fill {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.5625rem;
+  height: 100%;
+  background-color: #a8d5ff;
+}
+#main .myInfos a {
+  display: block;
+  margin-top: 0.434375rem;
+  text-align: center;
+  line-height: 0.3125rem;
+  font-size: 0.3125rem;
+  color: #000;
+}

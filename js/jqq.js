@@ -1,6 +1,6 @@
 /**
  *  Created on 2017/4/7
- *  version jqq-1.0
+ *  version jqq-1.1
  *  Author luxxxxxx
 **/
 (function(){
@@ -11,7 +11,6 @@
 		return this.exe(arg);
 	}
 	$.prototype = {
-		
 		getUrl : function (file) {
 			var url;
 			if (window.createObjectURL != undefined) {
