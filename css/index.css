@@ -1,5 +1,9 @@
+html {
+  height: 100%;
+}
 body {
   font-family: 'STXhei';
+  height: 100%;
 }
 #main {
   width: 10rem;
@@ -217,6 +221,8 @@ body {
   color: #099dff;
 }
 #main .footerSection > .main .section.select:nth-child(1) i.icon {
+  position: relative;
+  left: -0.03125rem;
   width: 0.8125rem;
   height: 0.625rem;
   background: url('../img/main/book1.png') no-repeat;

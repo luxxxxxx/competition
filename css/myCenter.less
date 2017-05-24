@@ -40,6 +40,7 @@ html,body {
 					height: 100%;
 					text-overflow: ellipsis;
 					overflow-x: hidden;
+					overflow-y: hidden;
 					white-space: nowrap;
 					font-size: 0.546875rem;
 				}
@@ -67,6 +68,7 @@ html,body {
 				display: inline-block;
 				width: 2.5875rem;
 				height: 100%;
+				overflow: hidden;
 				border-radius: 0.1875rem;
 				border: 1px solid black;
 				box-sizing: border-box;
@@ -91,6 +93,191 @@ html,body {
 			line-height: 0.3125rem;
 			font-size: 0.3125rem;
 			color: #000;
+		}
+	}
+	.content {
+		width: 9.375rem;
+		margin: 0 auto;
+		border-radius: 0.125rem;
+		background: rgba(255,255,255,.6);
+		box-sizing: border-box;
+		padding: 0 0.09375rem;
+		li {
+			height: 1.5rem;
+			border-bottom: 1px solid rgba(86,107,127,1);
+			line-height: 1.5rem;
+			&:nth-child(1) i.icon {
+				background: url('../img/myCenter/icon1.png') no-repeat center;
+				background-size: cover;
+			}
+			&:nth-child(2) i.icon {
+
+				background: url('../img/myCenter/icon2.png') no-repeat center;
+				background-size: cover;
+			}
+			&:nth-child(3) i.icon {
+				background: url('../img/myCenter/icon3.png') no-repeat center;
+				background-size: cover;
+			}
+			&:nth-child(4) i.icon {
+				width: 0.828125rem; 
+				height: 0.625rem;
+				margin-left: 0.203125rem; 
+				margin-right: 0.40625rem;
+				background: url('../img/myCenter/icon4.png') no-repeat center;
+				background-size: cover;
+			}
+			&:nth-child(5) {
+				border-bottom: 0;
+			}
+			&:nth-child(5) i.icon {
+				background: url('../img/myCenter/icon5.png') no-repeat center;
+				background-size: cover;
+			}
+			i.icon {
+				position: relative;
+				top: 0.109375rem;
+				width: 0.625rem;
+				height: 0.625rem;
+				display: inline-block;
+				margin-right: 0.5rem; 
+				margin-left: 0.3125rem; 
+
+			}
+			span {
+				position: relative;
+				font-size: 0.46875rem;
+				i {
+					position: absolute;
+					top: -0.078125rem;
+					border-radius: 50%;
+					right: -0.234375rem;
+					width: 0.15625rem;
+					height: 0.15625rem;
+					background: rgba(230,0,18,1);
+				}
+			}
+		}
+	}
+	.footerSection {
+		z-index: 10;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		height: 1.53125rem;
+		background: #fff;
+		& > .main {
+			width: 8.125rem;
+			height: 1.0rem;
+			margin: 0.234375rem auto 0;
+			background: inherit;
+			overflow: visible;
+			.section {
+				position: relative;
+				display: inline-block;
+				width: 0.703125rem;
+				height: 0.9375rem;
+				float: left;
+				&.select {
+					span {
+						color: rgba(9,157,255,1);
+					}
+					&:nth-child(1) {
+						i.icon {
+							width: 0.8125rem;
+							height: 0.625rem;
+							background: url('../img/main/book1.png') no-repeat;
+							background-size: cover;
+						}
+					}
+					&:nth-child(2) {
+						i.icon {
+							width: 0.6875rem;
+							height: 0.625rem;
+							background: url('../img/main/search1.png') no-repeat;
+							background-size: cover;
+						}
+					}
+					&:nth-child(3) {
+						i.icon {
+							width: 0.625rem;
+							height: 0.625rem;
+							background: url('../img/main/publish1.png') no-repeat;
+							background-size: cover;
+						}
+					}
+					&:nth-child(4) {
+						i.icon {
+							width: 0.59375rem;
+							height: 0.625rem;
+							background: url('../img/main/mine1.png') no-repeat;
+							background-size: cover;
+						}
+					}	
+
+				}
+				&:nth-child(1) {
+					margin-right: 1.796875rem;
+					i.icon {
+						display: block;
+						width: 0.75rem;
+						height: 0.59375rem;
+						margin: 0 auto;
+						background: url('../img/main/book.png') no-repeat;
+						background-size: cover;
+					}
+				}
+				&:nth-child(2) {
+					margin-right: 1.875rem;
+					i.icon {
+						display: block;
+						width: 0.59375rem;
+						height: 0.59375rem;
+						margin: 0 auto;
+						background: url('../img/main/search.png') no-repeat;
+						background-size: cover;
+					}
+				}
+				&:nth-child(3) {
+					i.icon {
+						display: block;
+						width: 0.59375rem;
+						height: 0.59375rem;
+						margin: 0 auto;
+						background: url('../img/main/publish.png') no-repeat;
+						background-size: cover;
+					}
+				}
+				&:nth-child(4) {
+					float: right;
+					i.icon {
+						display: block;
+						width: 0.59375rem;
+						height: 0.59375rem;
+						margin: 0 auto;
+						background: url('../img/main/mine.png') no-repeat;
+						background-size: cover;
+					}
+				}
+				i.icon {
+					display: block;
+					width: 100%;
+					height: 0.625rem;
+					background-size: cover;
+				}
+				span {
+					position: relative;
+					top: 0.078125rem;
+					display: block;
+					margin-top: 0.0625rem;
+					font-size: 0.34375rem;
+					white-space: nowrap;
+					text-align: center;
+					line-height: 0.3125rem;
+					color: rgba(125,100,100,1);
+					vertical-align: bottom;
+				}
+			}
 		}
 	}
 }

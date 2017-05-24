@@ -1,0 +1,110 @@
+html,
+body {
+  height: 100%;
+}
+#main {
+  width: 100%;
+  height: 100%;
+  background: url('../img/search/bg.png') no-repeat center;
+  background-size: cover;
+  box-sizing: border-box;
+  padding: 0.9375rem 0.3125rem 0;
+  overflow: hidden;
+}
+#main .scroll {
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding-bottom: 1.390625rem;
+}
+#main .time {
+  font-size: 0.3125rem;
+  color: #156068;
+  text-align: center;
+  height: 0.3125rem;
+  margin-top: 0.71875rem;
+  margin-bottom: 0.46875rem;
+}
+#main .msgCon {
+  margin-bottom: 0.34375rem;
+  min-height: 1.25rem;
+  letter-spacing: 0.234375rem;
+}
+#main .msgCon.self {
+  direction: rtl;
+}
+#main .msgCon .pho {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#main .msgCon .pho img {
+  width: 100%;
+  height: 100%;
+}
+#main .msgCon .msg {
+  direction: ltr;
+  display: inline-block;
+  max-width: 5.3125rem;
+  vertical-align: top;
+  background: #fff;
+  border-radius: 0.390625rem;
+  padding: 0.25rem 0.46875rem ;
+  font-size: 0.375rem;
+  letter-spacing: 0.015625rem;
+}
+#comment {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding-top: 0.234375rem;
+  padding-bottom: 0.21875rem;
+  height: 0.9375rem;
+  background: #fff;
+}
+#comment .middle {
+  display: inline-block;
+  margin: 0 auto;
+}
+#comment .pic {
+  position: relative;
+  top: 0.0625rem;
+  float: left;
+  width: 0.8125rem;
+  height: 0.8125rem;
+  margin-left: 0.21875rem;
+  background: url('../img/main/imgInsert.png') no-repeat center;
+  background-size: cover;
+}
+#comment #inputText {
+  float: left;
+  width: 7.09375rem;
+  height: 0.9375rem;
+  margin-left: 0.203125rem;
+  box-sizing: border-box;
+  padding: 0.0625rem 0.3125rem;
+  border: none;
+  outline: none;
+  background-color: #BAE9FD;
+  color: #7C7A7A;
+  font-size: 0.3125rem;
+  line-height: 0.3125rem;
+  border-radius: 0.09375rem;
+}
+#comment #sendBtn {
+  position: relative;
+  top: 0.078125rem;
+  float: left;
+  margin-left: 0.203125rem;
+  width: 1.25rem;
+  height: 0.78125rem;
+  color: #fff;
+  font-size: 0.34375rem;
+  text-align: center;
+  line-height: 0.78125rem;
+  background: #268ad1;
+  border-radius: 0.125rem;
+}

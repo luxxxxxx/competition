@@ -3,64 +3,45 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
-	<title>个人中心</title>
+	<title>我的消息</title>
 	<link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/myCenter.css">
+    <link rel="stylesheet" href="./css/myMsg.css">
     <script type="text/javascript">
 	!function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),q=a.devicePixelRatio;i=p?q>=3&&(!i||i>=3)?3:q>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var r=e.createElement("div");r.appendChild(g),e.write(r.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));
 	</script>
 </head>
 <body>
 	<div id="main">
-		<div class="myInfos">
-			<div class="pho">
+		<div class="msgCon">
+			<div class="userPho">
 				<img src="./img/main/tx.jpg" alt="">
 			</div>
-			<div class="name">
-				<div class="relative clearfix">
-					<p>老司机一号</p>
-					<i></i>
-				</div>
+			<div class="word">
+				<p>老司机1号</p>
+				<div class="lastMsg">23333</div>
 			</div>
-			<div class="expCon">
-				<span>书即值:</span>
-				<div class="expBar">
-					<div class="fill"></div>
-					0/400
-				</div>
+			<div class="timeCon">
+				<p class="time">23:41</p>
+				<i>1</i>
 			</div>
-			<a href="##">【点击查看详情】</a>
 		</div>
-		<ul class="content">
-			<li><i class="icon"></i><span>我的书即<i></i></span></li>
-			<li><i class="icon"></i><span>我的记录<i></i></span></li>
-			<li><i class="icon"></i><span>我的钱包<i></i></span></li>
-			<li><i class="icon"></i><span>我的消息<i></i></span></li>
-			<li><i class="icon"></i><span>我的通知<i></i></span></li>
-		</ul>
-		<div id="footer" class="footerSection">
-			<ul class="main">
-				<li class="section">  <!-- 当前页面 select -->
-					<i class="icon"></i>
-					<span>书即</span>
-				</li>
-				<li class="section ">
-					<i class="icon"></i>
-					<span>搜索</span>
-				</li>
-				<li class="section">
-					<i class="icon"></i>
-					<span>发布</span>
-				</li>
-				<li class="section select">
-					<i class="icon"></i>
-					<span>我的</span>
-				</li>
-			</ul>
+		<div class="msgCon">
+			<div class="userPho">
+				<img src="./img/main/tx.jpg" alt="">
+			</div>
+			<div class="word">
+				<p>巴啦啦能量巴啦啦能量巴啦啦能量巴啦啦能量</p>
+				<div class="lastMsg">尼玛老公求抱尼玛老公求抱尼玛老公求抱尼玛老公求抱尼玛老公求抱</div>
+			</div>
+			<div class="timeCon">
+				<p class="time">星期一</p>
+				<i>99</i>
+			</div>
 		</div>
 	</div>
 </body>
 </html>
 <script src="./js/jqq.js"></script>
 <script>
+	
 </script>
