@@ -1,0 +1,38 @@
+html,
+body {
+  height: 100%;
+}
+#main {
+  width: 10rem;
+  height: 100%;
+  box-sizing: border-box;
+  background: url('../img/main/bg.jpg') no-repeat center;
+  background-size: cover;
+  padding: 0.125rem 0.265625rem 0;
+}
+#main .item {
+  position: relative;
+  border-bottom: 1px solid black;
+  padding: 0.46875rem 0.4375rem;
+  box-sizing: border-box;
+  height: 1.34375rem;
+}
+#main .item p.bkName {
+  display: inline-block;
+  line-height: 0.4375rem;
+  font-size: 0.4375rem;
+  color: black;
+  max-width: 7.34375rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#main .item .start {
+  position: absolute;
+  right: 0.234375rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.75rem;
+  height: 0.75rem;
+  background: url('../img/start.png') no-repeat center;
+  background-size: cover;
+}

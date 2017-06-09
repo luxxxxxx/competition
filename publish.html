@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
 	<title>发布</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/publish.css">
@@ -80,23 +81,24 @@
 		flagType = false,
 		flagTime = false,
 		selectionType;  //全局选择类型  'rent'  'sell'
+		console.log($('#main'))
 		$('#main').height(winH);
 		$('.seleTypeBtn').click(function(){
 			selectionType = this.id;
 			$('#main').setClass('infos');
 		});
 
-		$('#mask').bind('touchstart',function (e) {
-			var e = e || window.event;
-			console.log(e.target)
-			console.log(this)
-			if (e.target === this) {
+		$('body').bind('touchstart',function (e) {
+			var e = e || window.event,
+				mask = $('#mask');
+				console.log(e.target)
+			if (e.target === mask[0]) {
 				$('#main').removeClass('mask');
 				$('.selectType').removeClass('on');
 				$('.seleCon').removeClass('on');
 			}
 		})
-
+		
 		$('#main > div.infos > div:nth-child(1) > div > input[type="text"]').bind('keyup',function(){
 			if (this.value != '') {
 				flagBookName = true;
@@ -136,13 +138,6 @@
 		$('.return').click(function () {
 			$('#main').setClass('infos')
 		})
-		// var infosL = $('#main div.infos').left(),
-		// 	infosT = $('#main div.infos').top(),
-		//     hiddenTagL1 = $('.selectType').eq(0).left() + infosL,
-		//     hiddenTagL2 = $('.selectType').eq(1).left() +　infosL,
-		//     hiddenTagT1 = $('.selectType').eq(0).top() +　infosT,
-		//     hiddenTagT2 = $('.selectType').eq(1).top() +　infosT;
-		// $('.hiddenTags').eq(0).top(hiddenTagT1);
-		// $('.hiddenTags').eq(0).left(hiddenTagL1);
+
 
 </script>

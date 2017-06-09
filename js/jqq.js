@@ -3,7 +3,30 @@
  *  version jqq-1.1
  *  Author luxxxxxx
 **/
+Ajax : function (obj) {
+	var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP'),  //兼容老版本IE 
+	method = json.method || 'get',
+	asyn = json.asyn ? true : json.asyn == false ? false : true,
+	data = json.data || '',
+	success = json.success,
+	error = json.error,
+	url = json.url;
+	if ( method.toLowerCase() === 'get' ) 
+		url += '?'+ data +'&'+new Date().getTime();
+	xhr.onreadystatechange = function(){
+		if ( xhr.readyState == 4 ) {
+			if ( xhr.status >= 200 && xhr.status < 300 )
+				success && success(xhr.responseText);
+			else
+				error && error();
+		}
+	};
+	xhr.open( method, url , aysn );
+	xhr.setRequestHeader('content-type' , 'application/x-www-form-urlencoded');
+	xhr.send(data);
+};
 (function(){
+
 	function $ (arg) {
 		return new Init(arg);
 	}
@@ -403,30 +426,8 @@
 		//Val
 		val : function () {
 			return this[0].value;
-		},
-		//Ajax
-		ajax : function (obj) {
-			var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP'),  //兼容老版本IE 
-			method = json.method || 'get',
-			asyn = json.asyn ? true : json.asyn == false ? false : true,
-			data = json.data || '',
-			success = json.success,
-			error = json.error,
-			url = json.url;
-			if ( method.toLowerCase() === 'get' ) 
-				url += '?'+ data +'&'+new Date().getTime();
-			xhr.onreadystatechange = function(){
-				if ( xhr.readyState == 4 ) {
-					if ( xhr.status >= 200 && xhr.status < 300 )
-						success && success(xhr.responseText);
-					else
-						error && error();
-				}
-			};
-			xhr.open( method, url , aysn );
-			xhr.setRequestHeader('content-type' , 'application/x-www-form-urlencoded');
-			xhr.send(data);
-		},
+		}
+		
  	}
 	window.$ = window.jqq = $;
 })()

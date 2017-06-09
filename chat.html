@@ -62,13 +62,16 @@
 </html>
 <script src="./js/jqq.js"></script>
 <script>
+	$.ajax('');
 	var $scrollCon = $('#main .scroll');
 	$('#sendBtn').click(function(){
 		var msg = $('#inputText').val();
-		$('#inputText')[0].value = '';
-		$('#main .scroll')[0].innerHTML += "<div class='msgCon self'><div class='pho'><img src='./img/main/tx.jpg' alt=''></div><div class='msg'>"+ msg +"</div></div>";
-		console.log($('#main .scroll')[0].scrollTop)
-		console.log($('#main .scroll')[0].clientY)
-		$scrollCon.scrollTop = $scrollCon.offsetHeight;
+		if (msg != '') {
+			$('#inputText')[0].value = '';
+			$('#main .scroll')[0].innerHTML += "<div class='msgCon self'><div class='pho'><img src='./img/main/tx.jpg' alt=''></div><div class='msg'>"+ msg +"</div></div>";
+			console.log($('#main .scroll')[0].scrollTop)
+			console.log($('#main .scroll')[0].clientY)
+			$scrollCon.scrollTop = $scrollCon.offsetHeight;
+		}
 	})
 </script>
