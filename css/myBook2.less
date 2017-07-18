@@ -5,7 +5,7 @@
 	background: url('../img/main/bg.jpg') no-repeat;
 	background-size: cover;
 	margin: 0 auto;
-	.contentTitle {
+	#contentCon {
 		width: 100%;
 		box-sizing: border-box;
 		.section {
@@ -184,36 +184,15 @@
 			}
 		}
 	}
-	.responseCon {
-		margin-bottom: 0.9375rem;
+	#responseCon {
 		.section {
 			background: rgba(255, 255, 255, 0.6);
 			border-radius: 0.125rem;
 			box-sizing: border-box;
 			margin-bottom: 0.234375rem;
-			padding: 0.21875rem 0.15625rem 0.140625rem 0.15625rem;
+			padding: 0.21875rem 0.75rem 0.140625rem 0.15625rem;
 			.user {
-				margin-bottom: 0.7375rem;
-				.comment {
-					width: 7.65625rem;
-					margin: 0 auto;
-					font-size: 0.28125rem;
-					span.u {
-						color: rgba(38,138,209,1);
-					}
-				}
-				&:after {
-					position: relative;
-					top: 0.15625rem;
-					height: 1px;
-					width:96%;
-					margin: 0 auto;
-					background: rgba(38,138,209,1);
-					visibility: visible;
-				}
-				&:nth-last-child(1):after {
-					visibility: hidden;
-				};
+				margin-bottom: 0.9375rem;
 				.photo {
 					float: left;
 					width: 1.0rem;
@@ -325,9 +304,10 @@
 			opacity: 0;
 		}
 		.showPics {
+		
 			.picSlider {
 				display: inline-block;
-				max-width: 8.40625rem;
+				max-width: 6.40625rem;
 				height: 100%;
 				
 				overflow-y: visible;
@@ -342,10 +322,10 @@
 					float: left;
 					width: 2.03125rem;
 					height: 2.03125rem;
-					margin-right: 0.353125rem;
+					margin-right: 0.453125rem;
 					border-radius: 0.09375rem;
 					&:nth-last-child(1) {
-						margin-right: 0.353125rem;
+						margin-right: 0.453125rem;
 					}
 					.delete {
 						display: inline-block;
@@ -432,7 +412,7 @@
 		background-color: #BAE9FD;
 		color: #7C7A7A;
 		font-size: 0.3125rem;
-		line-height: 0.9375 - 0.0625*2rem;
+		line-height: 0.3125rem;
 		border-radius: 0.09375rem;
 	}
 	#sendBtn {

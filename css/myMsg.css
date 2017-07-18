@@ -9,6 +9,7 @@ body {
   background-size: cover;
 }
 #main .msgCon {
+  position: relative;
   height: 1.515625rem;
   border-bottom: 1px solid black;
   box-sizing: border-box;
@@ -26,6 +27,8 @@ body {
   height: 100%;
 }
 #main .word {
+  position: absolute;
+  top: -0.15625rem;
   float: left;
   margin-left: 0.15625rem;
   position: relative;
@@ -33,23 +36,33 @@ body {
   height: 100%;
 }
 #main .word p {
+  position: relative;
+  top: -0.09375rem;
+  padding: 0;
   width: 4.6875rem;
-  overflow-x: hidden;
+  height: 0.546875rem;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 0.390625rem;
+  font-size: 0.15625rem;
 }
 #main .word div {
   width: 100%;
+  height: 0.546875rem;
+  line-height: 0.546875rem;
+  padding: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   color: #343434;
+  font-size: 0.15625rem;
 }
 #main .timeCon {
+  position: relative;
+  top: -0.15625rem;
   float: right;
-  width: 0.75rem;
   height: 100%;
+  width: 0.9375rem;
   text-align: center;
 }
 #main .timeCon p {
@@ -58,6 +71,10 @@ body {
   font-size: 0.234375rem;
 }
 #main .timeCon i {
+  position: absolute;
+  bottom: -0.3125rem;
+  left: 0;
+  right: 0;
   display: inline-block;
   width: 0.40625rem;
   height: 0.40625rem;
@@ -67,4 +84,5 @@ body {
   text-align: center;
   line-height: 0.40625rem;
   color: #fff;
+  font-size: 0.15625rem;
 }

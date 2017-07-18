@@ -3,7 +3,7 @@
  *  version jqq-1.1
  *  Author luxxxxxx
 **/
-Ajax : function (obj) {
+window.Ajax = function (obj) {
 	var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP'),  //兼容老版本IE 
 	method = json.method || 'get',
 	asyn = json.asyn ? true : json.asyn == false ? false : true,
@@ -26,7 +26,6 @@ Ajax : function (obj) {
 	xhr.send(data);
 };
 (function(){
-
 	function $ (arg) {
 		return new Init(arg);
 	}

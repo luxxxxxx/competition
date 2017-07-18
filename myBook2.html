@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+<head>
+    <meta charset="UTF-8">
+    <title>我的书即</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/myBook2.css">
+    <script type="text/javascript">
+	!function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),q=a.devicePixelRatio;i=p?q>=3&&(!i||i>=3)?3:q>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var r=e.createElement("div");r.appendChild(g),e.write(r.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));
+	</script>
+</head>
+<body>
+	<div id="main">
+		<div id="mask" class="pic">
+			<div id="relative">
+				<div class="showPics">
+					<div class="arrow"></div>
+					<div class="picSlider">
+						<ul class="picCon clearfix">
+							<li class="pic">
+								<img src="./img/main/tx.jpg" alt="用户头像" />
+								<i class="delete"></i>
+							</li>
+						</ul>
+					</div>
+					<div class="addPics"></div>
+				</div>
+			</div>
+		</div>  <!-- no：没有mask，pic：上传图片后显示图片，confirm：需要确认，success：成功-->
+		<div id="contentCon">
+			<div class="section clearfix">	
+				<div class="photo"><img src="./img/main/tx.jpg" alt="用户头像"></div>
+				<div class="rightCon clearfix">
+				<div class="top clearfix">
+					<div class="nameTag">
+						<div class="name"><span>老司机 1 号<i class="crown"></i></span></div>
+						<div class="date">2017-02-05 10:48:37</div>
+					</div>
+					<div class="star favor"></div> <!-- favor 收藏-->
+				</div>
+				<div class="t clearfix">
+					<span class="bookName">
+						单片机从入门到放弃单片机从入门到放弃
+					</span>
+					<span class="bookType">
+						【教材】
+					</span>
+					<span class="sellType">
+						租聘
+					</span>
+				</div>
+				<div class="article clearfix">
+					<div class="borrowCon">
+						<div class="l">
+							<p>告诉对方公司</p>
+							<span class="date">出租时间: 2017-02-06~2017-02-06</span>
+						</div>
+						<div class="borrow">借阅</div>
+					</div>
+				</div>
+				<div class="footer clearfix">
+					<div class="l">
+						<span class="text">浏览量</span>
+						<span class="num">999</span>
+					</div>
+					<div class="r">
+						<span class="num">999</span>
+						<span class="text">条评论</span>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		<div id="responseCon" class="clearfix">
+			<div class="section clearfix">
+				<div class="user clearfix">
+					<div class="photo">
+						<img src="./img/main/tx.jpg" alt="用户头像">
+					</div>
+					<div class="rightCon clearfix">
+					<div class="top clearfix">
+						<div class="nameTag">
+							<div class="name"><span>老司机 1 号<i class="crown"></i></span></div>
+							<div class="date">2017-02-05 10:48:37</div>
+						</div>
+						<div class="thumbCon clearfix">
+							<i class="thumb"></i>
+							<span class="num">666</span>
+						</div>
+					</div>
+					<div class="response">
+						<p>回复</p>
+						<div class="imgCon clearfix">
+							<div class="img">
+								<img src="./img/main/tx.jpg" alt="上传图片">
+							</div>
+							<div class="img">
+								<img src="./img/main/tx.jpg" alt="上传图片">
+							</div>
+							<div class="img">
+								<img src="./img/main/tx.jpg" alt="上传图片">
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="user clearfix">
+					<div class="photo">
+						<img src="./img/main/tx.jpg" alt="用户头像">
+					</div>
+					<div class="rightCon clearfix">
+					<div class="top clearfix">
+						<div class="nameTag">
+							<div class="name"><span>老司机 1 号<i class="crown"></i></span></div>
+							<div class="date">2017-02-05 10:48:37</div>
+						</div>
+						<div class="thumbCon clearfix">
+							<i class="thumb"></i>
+							<span class="num">666</span>
+						</div>
+					</div>
+					<div class="response">
+						<p>回复</p>
+						<div class="imgCon clearfix">
+							<div class="img">
+								<img src="./img/main/tx.jpg" alt="上传图片">
+							</div>
+							<div class="img">
+								<img src="./img/main/tx.jpg" alt="上传图片">
+							</div>
+							<div class="img">
+								<img src="./img/main/tx.jpg" alt="上传图片">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>  <!-- ???? -->
+</div>
+<div id="comment">
+	<div class="middle clearfix">
+		<div class="pic"></div>
+		<input type="text" id="inputText"/>
+		<div id="sendBtn">发送</div>
+		<input type="file" accept="image/*" nultiple="multiple" id="inputFile" style="display: none;">
+	</div>
+</div>
+</body>
+</html>
+<script src="./js/jqq.js"></script>
+<script>
+	// $("#main").css("width", window.innerWidth +"px");
+	// $("#comment").css("width", window.innerWidth +"px");
+	var $inputFile = $("#inputFile");
+	$("#comment .pic").click(function () { 
+		$("#mask").setClass("pic");
+	})
+	$("#mask > div > div.addPics").click(function () { //点击图片
+		$inputFile.click();
+	})
+	$inputFile.bind('change',function(){  //监听file改变
+		$("#mask > div > div.picSlider > ul").html('');
+		var file = this.files,
+			reader = new FileReader(),
+			picsBase = [],
+			reader = new FileReader(),
+		    loopNum = Math.min(file.length,2);
+		for (var i = 0; i < loopNum; i++) {
+			var file = this.files,
+				reader = new FileReader(),
+			    oLi = document.createElement('li'),
+			    oImg = document.createElement('img'),
+			    oI = document.createElement('oI'),
+			    cvs = document.createElement('canvas');
+		    oI.className = 'delete';
+		    oI.onclick = function () {
+		    	$(this).parent().remove();
+		    }
+		    oLi.appendChild(oI);
+			reader.onload = function () {
+				cvs.width = 500;
+				cvs.height = 500;
+				var ctx = cvs.getContext('2d');
+				ctx.drawImage(this,0,0,cvs.width,cvs.height);
+				newImageData = cvs.toDataURL(file[i],0.5);
+				oImg.src = newImageData;
+				oLi.appendChild(oImg);
+				oLi.className = 'pic';
+				$("#mask > div > div.picSlider > ul")[0].appendChild(oLi);
+			}
+		}
+
+	})
+
+	//<li class="pic">
+//						<img src="./img/main/tx.jpg" alt="用户头像" />
+//						<i class="delete"></i>
+//					</li>
+	$('.delete').click(function () { //删除图片
+		$(this).parent().remove();
+	}) 
+	$("#mask").bind("touchstart",function (e) {  //触摸屏幕退回之前选择图片前
+		var e = e || window.evnet;
+		if (e.target === this) {
+			this.className = 'no';
+		}
+	})
+
+
+
+</script>
