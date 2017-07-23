@@ -320,9 +320,89 @@
 		z-index: 100;
 		transition: .2s all ease;
 		opacity: 1;
+
 		&.no {
 			visibility: hidden;
 			opacity: 0;
+		}
+		&.msg {
+			.msg {
+				display: block;
+			}
+		}
+		.msg {
+			z-index: 150;
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			width: 7.5rem;
+			height: 3.75rem;
+			box-sizing: border-box;
+			border-radius: 0.09375rem;
+			background: #fff;
+			text-align: center;
+			box-sizing: border-box;
+			padding: 0.796875rem 1.25rem 0;
+			display: none;
+			p {
+				font-size: 0.3125rem;
+				color: #000;
+				line-height: 0.453125rem;
+			}
+			.normalCon {
+				display: block;
+			}
+			.successCon {
+				display: none;
+			}
+			&.success {
+				.successCon {
+					display: block;
+				}
+				.normalCon {
+					display: none; 
+				}
+				.btnCon {
+					.normal {
+						display: none;
+					}
+					.success {
+						display: block;
+					}
+				}
+			}
+			.btnCon {
+				margin-top: 0.28125rem;
+				.btn {
+					width: 1.875rem;
+					height: 0.625rem;
+					background: #268ad1;
+					color: #FEFDFD;
+					font-size: 0.3125rem;
+					line-height: 0.625rem;
+					text-align: center;
+					border-radius: 0.125rem;
+					&.confirm {
+						float: left;
+					}
+					&.cancle {
+						float: right;
+					}
+
+					&.return {
+						width: 3.75rem;
+						margin: 0 auto;
+					}
+				}
+				.normal {
+					display: block;
+				}
+				.success {
+					margin-top: 0.59375rem;
+					display: none;
+				}
+			}
 		}
 		.showPics {
 			.picSlider {

@@ -37,6 +37,7 @@ body {
   font-size: 0.34375rem;
   padding: 0 0.53125rem;
   height: 100%;
+  transition: .15s background linear;
 }
 #main .nav li.current {
   background: #fff;
@@ -60,6 +61,7 @@ body {
   background: #268ad1;
   color: #fff;
   box-sizing: border-box;
+  transition: .2s all linear;
 }
 #main .btnCon .btn.current {
   background: #fff;
@@ -70,6 +72,18 @@ body {
   box-sizing: border-box;
   padding: 0 0.28125rem;
   overflow: auto;
+}
+#main #contentCon > .content {
+  overflow: hidden;
+}
+#main #contentCon > .content .ul {
+  position: relative;
+  left: 0;
+  width: 200%;
+  transition: .2s all ease;
+}
+#main #contentCon .contentType {
+  float: left;
 }
 #main #contentCon .contentType .section {
   background: rgba(255, 255, 255, 0.6);

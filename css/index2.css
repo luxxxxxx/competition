@@ -316,6 +316,77 @@
   visibility: hidden;
   opacity: 0;
 }
+#main #mask.msg .msg {
+  display: block;
+}
+#main #mask .msg {
+  z-index: 150;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.5rem;
+  height: 3.75rem;
+  border-radius: 0.09375rem;
+  background: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0.796875rem 1.25rem 0;
+  display: none;
+}
+#main #mask .msg p {
+  font-size: 0.3125rem;
+  color: #000;
+  line-height: 0.453125rem;
+}
+#main #mask .msg .normalCon {
+  display: block;
+}
+#main #mask .msg .successCon {
+  display: none;
+}
+#main #mask .msg.success .successCon {
+  display: block;
+}
+#main #mask .msg.success .normalCon {
+  display: none;
+}
+#main #mask .msg.success .btnCon .normal {
+  display: none;
+}
+#main #mask .msg.success .btnCon .success {
+  display: block;
+}
+#main #mask .msg .btnCon {
+  margin-top: 0.28125rem;
+}
+#main #mask .msg .btnCon .btn {
+  width: 1.875rem;
+  height: 0.625rem;
+  background: #268ad1;
+  color: #FEFDFD;
+  font-size: 0.3125rem;
+  line-height: 0.625rem;
+  text-align: center;
+  border-radius: 0.125rem;
+}
+#main #mask .msg .btnCon .btn.confirm {
+  float: left;
+}
+#main #mask .msg .btnCon .btn.cancle {
+  float: right;
+}
+#main #mask .msg .btnCon .btn.return {
+  width: 3.75rem;
+  margin: 0 auto;
+}
+#main #mask .msg .btnCon .normal {
+  display: block;
+}
+#main #mask .msg .btnCon .success {
+  margin-top: 0.59375rem;
+  display: none;
+}
 #main #mask .showPics .picSlider {
   display: inline-block;
   max-width: 8.40625rem;

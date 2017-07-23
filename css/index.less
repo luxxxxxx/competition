@@ -35,6 +35,7 @@ body {
 			font-size: 0.34375rem;
 			padding: 0 0.53125rem;
 			height: 100%;
+			transition: .15s background linear;
 			&.current {
 				background: #fff;
 				color: rgba(76,167,255,1);
@@ -58,6 +59,7 @@ body {
 			background: #268ad1;
 			color: #fff;
 			box-sizing: border-box;
+			transition: .2s all linear;
 			&.current {
 				background: #fff;
 				color: #268ad1;
@@ -69,7 +71,17 @@ body {
 		box-sizing: border-box;
 		padding: 0 0.28125rem;
 		overflow: auto;
+		&>.content {
+			overflow: hidden;
+			.ul {
+				position: relative;
+				left: 0;
+				width: 200%;
+				transition: .2s all ease;
+			}
+		}
 		.contentType {
+			float: left;
 			.section {
 				background: rgba(255,255,255,.6);
 				border-radius: 0.125rem;

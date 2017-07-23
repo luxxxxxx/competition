@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>积分详情</title>
+	    <link rel="stylesheet" href="./css/reset.css">
+	    <link rel="stylesheet" href="./css/integral.css">
+	    <script type="text/javascript">
+		!function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),q=a.devicePixelRatio;i=p?q>=3&&(!i||i>=3)?3:q>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var r=e.createElement("div");r.appendChild(g),e.write(r.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));
+		</script>
+</head>
+<body>
+	<div id="main">
+		<div class="t">
+			<p>你当前的书即值</p><div class="exp">0/400</div>
+		</div>
+		<div class="t">距离下一等级还需要经验值400</div>
+		<div class="content">
+			<span>信用评级根据：</span>
+			<span>借阅书籍能否按时归还、借阅书籍的数量</span>
+			<span>购买书籍能否及时付款、购买书籍的数量</span>
+			<span>出售书籍能否按时交货</span>
+			<span>出租书籍能否及时将书籍交付</span>
+			<span>评级的标准：</span>
+			<span>每次按时归还一本书籍+10分</span>
+			<span>反之-15分</span>
+			<span>按照指定要求购买书籍+15分</span>
+			<span>反之-20分</span>
+			<span>每次出租和出售书籍成功+10分</span>
+			<span>反之-5分</span>
+			<span>按照等级进行分类</span>
+			<span>0~1级的分值是320分</span>
+			<span>往后每增加一个等级</span>
+			<span>则需要的分值一次往后+80分</span>
+			<span>如：1~2级所需要的分值为400分</span>
+		</div>
+	</div>
+</body>
+</html>
+<script src="./js/jqq.js"></script>
+<script>
+	
+</script>

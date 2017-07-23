@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
 <head>
     <meta charset="UTF-8">
-    <title>书及</title>
+    <title>书即</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index2.css">
     <script type="text/javascript">
@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div id="main">
-		<div id="mask" class="pic">
+		<div id="mask" class="no"> <!-- pic 发送图片  msg 显示消息 -->
 			<div id="relative">
 				<div class="showPics">
 					<div class="arrow"></div>
@@ -22,6 +22,26 @@
 						</ul>
 					</div>
 					<div class="addPics"></div>
+				</div>
+				<div class="msg"> <!-- success 借阅成功-->
+					<div class="normalCon">
+						<p>借阅时间为：</p>
+						<p class="date">2017/2/6~2017/2/10</p>
+						<p>你确定要借阅吗？</p>
+					</div>
+					<div class="successCon">
+						<p>借阅成功!</p>
+						<p>请等待租凭者与您联系</p>
+					</div>
+					<div class="btnCon clearfix">
+						<div class="normal">
+							<div class="btn confirm">确定</div>
+							<div class="btn cancle">取消</div>
+						</div>
+						<div class="success">
+							<div class="return btn">返回</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>  <!-- no：没有mask，pic：上传图片后显示图片，confirm：需要确认，success：成功-->
@@ -151,7 +171,7 @@
 <div id="comment">
 	<div class="middle clearfix">
 		<div class="pic"></div>
-		<textarea name="" id="inputText" cols="30" rows="10"></textarea>
+		<input type="text" id="inputText">
 		<div id="sendBtn">发送</div>
 		<input type="file" accept="image/*" multiple="multiple" id="inputFile" style="display: none;">
 	</div>
@@ -165,6 +185,7 @@
 	var $addPics = $('#relative > div > div.addPics'),  //添加图片按钮
 		$inputFile = $('#inputFile'),
 		$mask = $('#mask'),
+		mask = document.querySelector('#mask'),
 		$picBtn = $('#comment > div > div.pic'),  //发送图片按钮
 		picsUrlArr = [],  //存放图片链接数组  (最大上传三张图片)
 		$sendBtn = $('#sendBtn'),
@@ -225,12 +246,36 @@
 		}
 	});
 
-	$sendBtn.click(function () {
+	$sendBtn.click(function () {  //发送
 		var pics = $picsBox[0].querySelectorAll('li.pic');
 		for (var i = 0; i < pics.length; i++) {
 			console.log(pics[i].getAttribute('base64'))
 		}
 	})
+
+	var $borrowBtn = $('#main > div.article > div.contentTitle > div > div.rightCon.clearfix > div.article.clearfix > div > div.borrow'),
+		$cancleBtn = $('#relative > div.msg > div.btnCon.clearfix > div.normal > div.btn.cancle');
+
+	$borrowBtn.click(function(){
+		mask.className = 'msg';
+	}) 
+	$cancleBtn.click(function(){
+		mask.className = 'no';
+		$msgCon.removeClass('success');
+	})
+	var $confirmBorrow = $('#relative > div.msg > div.btnCon.clearfix > div.normal > div.btn.confirm'),
+		$msgCon = $('#relative > div.msg'),
+		$returnBtn = $('#relative div.return');
+
+	$confirmBorrow.click(function(){
+		$msgCon.addClass('success');
+	})
+
+	$returnBtn.click(function(){
+		mask.className = 'no';
+		$msgCon.removeClass('success');
+	})
+
 
 	// var $inputFile = $("#inputFile");
 	// $("#comment .pic").click(function () { 

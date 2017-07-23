@@ -6,18 +6,18 @@
   background-size: cover;
   margin: 0 auto;
 }
-#main #contentCon {
+#main .contentTitle {
   width: 100%;
   box-sizing: border-box;
 }
-#main #contentCon .section {
+#main .contentTitle .section {
   background: rgba(255, 255, 255, 0.6);
   border-radius: 0.125rem;
   box-sizing: border-box;
   margin-bottom: 0.234375rem;
   padding: 0.21875rem 0.75rem 0.140625rem 0.15625rem;
 }
-#main #contentCon .section .photo {
+#main .contentTitle .section .photo {
   float: left;
   width: 1.0rem;
   height: 1.0rem;
@@ -25,27 +25,27 @@
   overflow: hidden;
   margin-right: 0.234375rem;
 }
-#main #contentCon .section .photo img {
+#main .contentTitle .section .photo img {
   width: 100%;
   height: 100%;
 }
-#main #contentCon .section .rightCon {
+#main .contentTitle .section .rightCon {
   width: 7.265625rem;
   float: left;
 }
-#main #contentCon .section .rightCon .nameTag {
+#main .contentTitle .section .rightCon .nameTag {
   position: relative;
   float: left;
   max-width: 3.90625rem;
 }
-#main #contentCon .section .rightCon .nameTag .name {
+#main .contentTitle .section .rightCon .nameTag .name {
   font-size: 0.375rem;
   color: #000;
 }
-#main #contentCon .section .rightCon .nameTag .name span {
+#main .contentTitle .section .rightCon .nameTag .name span {
   position: relative;
 }
-#main #contentCon .section .rightCon .nameTag .name span i.crown {
+#main .contentTitle .section .rightCon .nameTag .name span i.crown {
   position: absolute;
   right: -0.46875rem;
   top: 0.15625rem;
@@ -54,11 +54,11 @@
   background: url('../img/main/crown.png') no-repeat center;
   background-size: cover;
 }
-#main #contentCon .section .rightCon .nameTag .date {
+#main .contentTitle .section .rightCon .nameTag .date {
   font-size: 0.234375rem;
   color: #5b5959;
 }
-#main #contentCon .section .rightCon .star {
+#main .contentTitle .section .rightCon .star {
   position: relative;
   float: right;
   width: 0.3125rem;
@@ -67,31 +67,31 @@
   background: url('../img/main/star1.png') no-repeat center;
   background-size: cover;
 }
-#main #contentCon .section .rightCon .star.favor {
+#main .contentTitle .section .rightCon .star.favor {
   background: url('../img/main/star.png') no-repeat center;
   background-size: cover;
 }
-#main #contentCon .section .t {
+#main .contentTitle .section .t {
   font-size: 0.46875rem;
   margin: 0 auto 0.078125rem;
   white-space: nowrap;
 }
-#main #contentCon .section .t span {
+#main .contentTitle .section .t span {
   font-size: 0.46875rem;
   vertical-align: top;
 }
-#main #contentCon .section .t span.bookName {
+#main .contentTitle .section .t span.bookName {
   display: inline-block;
   max-width: 4.53125rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-#main #contentCon .section .t span.bookType {
+#main .contentTitle .section .t span.bookType {
   color: #009917;
   margin-left: -0.15625rem;
 }
-#main #contentCon .section .t span.sellType {
+#main .contentTitle .section .t span.sellType {
   color: #fff;
   width: 0.625rem;
   white-space: nowrap;
@@ -105,12 +105,12 @@
   padding: 0 0.046875rem;
   margin-left: -0.3125rem;
 }
-#main #contentCon .section .article {
+#main .contentTitle .section .article {
   position: relative;
   width: 100%;
   margin: 0 auto;
 }
-#main #contentCon .section .article .desc {
+#main .contentTitle .section .article .desc {
   margin: 0 auto;
   font-size: 0.375rem;
   top: 0.71875rem;
@@ -120,21 +120,21 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
-#main #contentCon .section .article .borrowCon {
+#main .contentTitle .section .article .borrowCon {
   position: relative;
 }
-#main #contentCon .section .article .borrowCon .l {
+#main .contentTitle .section .article .borrowCon .l {
   display: inline-block;
   max-width: 5.625rem;
 }
-#main #contentCon .section .article .borrowCon .l p {
+#main .contentTitle .section .article .borrowCon .l p {
   font-size: 0.375rem;
   max-width: 5.625rem;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-#main #contentCon .section .article .borrowCon .l .date {
+#main .contentTitle .section .article .borrowCon .l .date {
   font-size: 0.1875rem;
   color: #5b5959;
   max-width: 5.625rem;
@@ -142,7 +142,7 @@
   white-space: nowrap;
   overflow: hidden;
 }
-#main #contentCon .section .article .borrowCon .borrow {
+#main .contentTitle .section .article .borrowCon .borrow {
   position: absolute;
   right: 0;
   bottom: 0.234375rem;
@@ -158,35 +158,58 @@
   color: #fff;
   border-radius: 0.09375rem;
 }
-#main #contentCon .section .footer {
+#main .contentTitle .section .footer {
   margin-top: 0.078125rem;
 }
-#main #contentCon .section .footer div.l {
+#main .contentTitle .section .footer div.l {
   float: left;
 }
-#main #contentCon .section .footer div.l .text {
+#main .contentTitle .section .footer div.l .text {
   margin-right: 0.09375rem;
 }
-#main #contentCon .section .footer div.r {
+#main .contentTitle .section .footer div.r {
   float: right;
 }
-#main #contentCon .section .footer div.r .num {
+#main .contentTitle .section .footer div.r .num {
   margin-right: 0.09375rem;
 }
-#main #contentCon .section .footer div span {
+#main .contentTitle .section .footer div span {
   font-size: 0.234375rem;
 }
-#main #responseCon .section {
+#main .responseCon {
+  margin-bottom: 0.9375rem;
+}
+#main .responseCon .section {
   background: rgba(255, 255, 255, 0.6);
   border-radius: 0.125rem;
   box-sizing: border-box;
   margin-bottom: 0.234375rem;
-  padding: 0.21875rem 0.75rem 0.140625rem 0.15625rem;
+  padding: 0.21875rem 0.15625rem 0.140625rem 0.15625rem;
 }
-#main #responseCon .section .user {
-  margin-bottom: 0.9375rem;
+#main .responseCon .section .user {
+  margin-bottom: 0.7375rem;
 }
-#main #responseCon .section .user .photo {
+#main .responseCon .section .user .comment {
+  width: 7.65625rem;
+  margin: 0 auto;
+  font-size: 0.28125rem;
+}
+#main .responseCon .section .user .comment span.u {
+  color: #268ad1;
+}
+#main .responseCon .section .user:after {
+  position: relative;
+  top: 0.15625rem;
+  height: 1px;
+  width: 96%;
+  margin: 0 auto;
+  background: #268ad1;
+  visibility: visible;
+}
+#main .responseCon .section .user:nth-last-child(1):after {
+  visibility: hidden;
+}
+#main .responseCon .section .user .photo {
   float: left;
   width: 1.0rem;
   height: 1.0rem;
@@ -194,27 +217,27 @@
   overflow: hidden;
   margin-right: 0.234375rem;
 }
-#main #responseCon .section .user .photo img {
+#main .responseCon .section .user .photo img {
   width: 100%;
   height: 100%;
 }
-#main #responseCon .section .user .rightCon {
+#main .responseCon .section .user .rightCon {
   width: 7.265625rem;
   float: left;
 }
-#main #responseCon .section .user .rightCon .nameTag {
+#main .responseCon .section .user .rightCon .nameTag {
   position: relative;
   float: left;
   max-width: 3.90625rem;
 }
-#main #responseCon .section .user .rightCon .nameTag .name {
+#main .responseCon .section .user .rightCon .nameTag .name {
   font-size: 0.375rem;
   color: #000;
 }
-#main #responseCon .section .user .rightCon .nameTag .name span {
+#main .responseCon .section .user .rightCon .nameTag .name span {
   position: relative;
 }
-#main #responseCon .section .user .rightCon .nameTag .name span i.crown {
+#main .responseCon .section .user .rightCon .nameTag .name span i.crown {
   position: absolute;
   right: -0.46875rem;
   top: 0.15625rem;
@@ -223,17 +246,17 @@
   background: url('../img/main/crown.png') no-repeat center;
   background-size: cover;
 }
-#main #responseCon .section .user .rightCon .nameTag .date {
+#main .responseCon .section .user .rightCon .nameTag .date {
   font-size: 0.234375rem;
   color: #5b5959;
 }
-#main #responseCon .section .user .rightCon .thumbCon {
+#main .responseCon .section .user .rightCon .thumbCon {
   position: relative;
   top: 0.3125rem;
   float: right;
   display: inline-block;
 }
-#main #responseCon .section .user .rightCon .thumbCon i {
+#main .responseCon .section .user .rightCon .thumbCon i {
   position: relative;
   display: inline-block;
   margin-top: 0.09375rem;
@@ -243,27 +266,27 @@
   background-size: cover;
   line-height: 0.4375rem;
 }
-#main #responseCon .section .user .rightCon .thumbCon span {
+#main .responseCon .section .user .rightCon .thumbCon span {
   position: relative;
   top: -0.046875rem;
   margin-left: 0.046875rem;
   color: #268ad1;
 }
-#main #responseCon .section .user .rightCon .response {
+#main .responseCon .section .user .rightCon .response {
   width: 7.65625rem;
 }
-#main #responseCon .section .user .rightCon .response p {
+#main .responseCon .section .user .rightCon .response p {
   font-size: 0.375rem;
   line-height: 0.5625rem;
 }
-#main #responseCon .section .user .rightCon .response .imgCon {
+#main .responseCon .section .user .rightCon .response .imgCon {
   max-width: 100%;
   overflow-x: hidden;
   white-space: nowrap;
   margin-top: 0.15625rem;
   margin-bottom: 0.1875rem;
 }
-#main #responseCon .section .user .rightCon .response .imgCon .img {
+#main .responseCon .section .user .rightCon .response .imgCon .img {
   float: left;
   width: 2.5rem;
   height: 2.5rem;
@@ -271,10 +294,10 @@
   overflow: hidden;
   border-radius: 0.09375rem;
 }
-#main #responseCon .section .user .rightCon .response .imgCon .img:nth-child(3) {
+#main .responseCon .section .user .rightCon .response .imgCon .img:nth-child(3) {
   margin-right: 0;
 }
-#main #responseCon .section .user .rightCon .response .imgCon .img img {
+#main .responseCon .section .user .rightCon .response .imgCon .img img {
   width: 100%;
   height: 100%;
 }
@@ -293,9 +316,80 @@
   visibility: hidden;
   opacity: 0;
 }
+#main #mask.msg .msg {
+  display: block;
+}
+#main #mask .msg {
+  z-index: 150;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.5rem;
+  height: 3.75rem;
+  border-radius: 0.09375rem;
+  background: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0.796875rem 1.25rem 0;
+  display: none;
+}
+#main #mask .msg p {
+  font-size: 0.3125rem;
+  color: #000;
+  line-height: 0.453125rem;
+}
+#main #mask .msg .normalCon {
+  display: block;
+}
+#main #mask .msg .successCon {
+  display: none;
+}
+#main #mask .msg.success .successCon {
+  display: block;
+}
+#main #mask .msg.success .normalCon {
+  display: none;
+}
+#main #mask .msg.success .btnCon .normal {
+  display: none;
+}
+#main #mask .msg.success .btnCon .success {
+  display: block;
+}
+#main #mask .msg .btnCon {
+  margin-top: 0.28125rem;
+}
+#main #mask .msg .btnCon .btn {
+  width: 1.875rem;
+  height: 0.625rem;
+  background: #268ad1;
+  color: #FEFDFD;
+  font-size: 0.3125rem;
+  line-height: 0.625rem;
+  text-align: center;
+  border-radius: 0.125rem;
+}
+#main #mask .msg .btnCon .btn.confirm {
+  float: left;
+}
+#main #mask .msg .btnCon .btn.cancle {
+  float: right;
+}
+#main #mask .msg .btnCon .btn.return {
+  width: 3.75rem;
+  margin: 0 auto;
+}
+#main #mask .msg .btnCon .normal {
+  display: block;
+}
+#main #mask .msg .btnCon .success {
+  margin-top: 0.59375rem;
+  display: none;
+}
 #main #mask .showPics .picSlider {
   display: inline-block;
-  max-width: 6.40625rem;
+  max-width: 8.40625rem;
   height: 100%;
   overflow-y: visible;
 }
@@ -310,11 +404,11 @@
   float: left;
   width: 2.03125rem;
   height: 2.03125rem;
-  margin-right: 0.453125rem;
+  margin-right: 0.353125rem;
   border-radius: 0.09375rem;
 }
 #main #mask .showPics .picSlider .pic:nth-last-child(1) {
-  margin-right: 0.453125rem;
+  margin-right: 0.353125rem;
 }
 #main #mask .showPics .picSlider .pic .delete {
   display: inline-block;
@@ -394,7 +488,7 @@
   background-color: #BAE9FD;
   color: #7C7A7A;
   font-size: 0.3125rem;
-  line-height: 0.3125rem;
+  line-height: 0.8125rem;
   border-radius: 0.09375rem;
 }
 #comment #sendBtn {

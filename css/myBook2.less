@@ -5,7 +5,7 @@
 	background: url('../img/main/bg.jpg') no-repeat;
 	background-size: cover;
 	margin: 0 auto;
-	#contentCon {
+	.contentTitle {
 		width: 100%;
 		box-sizing: border-box;
 		.section {
@@ -184,15 +184,36 @@
 			}
 		}
 	}
-	#responseCon {
+	.responseCon {
+		margin-bottom: 0.9375rem;
 		.section {
 			background: rgba(255, 255, 255, 0.6);
 			border-radius: 0.125rem;
 			box-sizing: border-box;
 			margin-bottom: 0.234375rem;
-			padding: 0.21875rem 0.75rem 0.140625rem 0.15625rem;
+			padding: 0.21875rem 0.15625rem 0.140625rem 0.15625rem;
 			.user {
-				margin-bottom: 0.9375rem;
+				margin-bottom: 0.7375rem;
+				.comment {
+					width: 7.65625rem;
+					margin: 0 auto;
+					font-size: 0.28125rem;
+					span.u {
+						color: rgba(38,138,209,1);
+					}
+				}
+				&:after {
+					position: relative;
+					top: 0.15625rem;
+					height: 1px;
+					width:96%;
+					margin: 0 auto;
+					background: rgba(38,138,209,1);
+					visibility: visible;
+				}
+				&:nth-last-child(1):after {
+					visibility: hidden;
+				};
 				.photo {
 					float: left;
 					width: 1.0rem;
@@ -299,15 +320,94 @@
 		z-index: 100;
 		transition: .2s all ease;
 		opacity: 1;
+
 		&.no {
 			visibility: hidden;
 			opacity: 0;
 		}
+		&.msg {
+			.msg {
+				display: block;
+			}
+		}
+		.msg {
+			z-index: 150;
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			width: 7.5rem;
+			height: 3.75rem;
+			box-sizing: border-box;
+			border-radius: 0.09375rem;
+			background: #fff;
+			text-align: center;
+			box-sizing: border-box;
+			padding: 0.796875rem 1.25rem 0;
+			display: none;
+			p {
+				font-size: 0.3125rem;
+				color: #000;
+				line-height: 0.453125rem;
+			}
+			.normalCon {
+				display: block;
+			}
+			.successCon {
+				display: none;
+			}
+			&.success {
+				.successCon {
+					display: block;
+				}
+				.normalCon {
+					display: none; 
+				}
+				.btnCon {
+					.normal {
+						display: none;
+					}
+					.success {
+						display: block;
+					}
+				}
+			}
+			.btnCon {
+				margin-top: 0.28125rem;
+				.btn {
+					width: 1.875rem;
+					height: 0.625rem;
+					background: #268ad1;
+					color: #FEFDFD;
+					font-size: 0.3125rem;
+					line-height: 0.625rem;
+					text-align: center;
+					border-radius: 0.125rem;
+					&.confirm {
+						float: left;
+					}
+					&.cancle {
+						float: right;
+					}
+
+					&.return {
+						width: 3.75rem;
+						margin: 0 auto;
+					}
+				}
+				.normal {
+					display: block;
+				}
+				.success {
+					margin-top: 0.59375rem;
+					display: none;
+				}
+			}
+		}
 		.showPics {
-		
 			.picSlider {
 				display: inline-block;
-				max-width: 6.40625rem;
+				max-width: 8.40625rem;
 				height: 100%;
 				
 				overflow-y: visible;
@@ -322,10 +422,10 @@
 					float: left;
 					width: 2.03125rem;
 					height: 2.03125rem;
-					margin-right: 0.453125rem;
+					margin-right: 0.353125rem;
 					border-radius: 0.09375rem;
 					&:nth-last-child(1) {
-						margin-right: 0.453125rem;
+						margin-right: 0.353125rem;
 					}
 					.delete {
 						display: inline-block;
@@ -412,7 +512,7 @@
 		background-color: #BAE9FD;
 		color: #7C7A7A;
 		font-size: 0.3125rem;
-		line-height: 0.3125rem;
+		line-height: 0.9375 - 0.0625*2rem;
 		border-radius: 0.09375rem;
 	}
 	#sendBtn {
